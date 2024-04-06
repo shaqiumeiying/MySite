@@ -1,0 +1,10 @@
+BASE:
+青绿#8CFFD8
+樱粉#FFB0CC
+
+Darker:
+青绿#2A795E
+樱粉#6F334A
+
+#60C8A6
+#C2517D

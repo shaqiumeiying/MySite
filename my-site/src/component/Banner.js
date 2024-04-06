@@ -9,7 +9,7 @@ export const Banner = () => {
     const [text, setText] = useState("");
     const [index, setIndex] = useState(1);
     const [delta, setDelta] = useState(300 - Math.random() * 100); // Adjust deleting speed
-    const toDisplay = [ "Software Developer", "Video Editor", "", "UX/UI developer", "Gamer", "Content Creator", "Explorer", "Active Learner"];
+    const toDisplay = [ "Coding", "UX/UI", "Software Development", "Video Editing","Content Creating"];
     const period = 2000;
     const wordDelay = 1000; // Adjust the duration of the pause before each word starts typing
    
@@ -62,11 +62,16 @@ export const Banner = () => {
         <div className="banner-content">
           <Container>
               <Row className="align-items-center">
-                  <Col xs={12} md={10} xl={7}>   
-                      <span className="tagline">Welcome to my portfolio</span>
-                      <h1>{`I'm a `}<span className="wrap">{text}</span></h1>
-                      <p>This is a placeholder for about me</p>
+                  <Col xs={12} md={6} xl={7}>   
+                      <span className="tagline">Welcome to my Protfolio</span>
+                      <h1>{`I'm Diana , I Love `}<span className="wrap">{text}</span></h1>
+                      <br></br>
+                      <p>This is a placeholder for about me This is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about me</p>
+                      <br></br>
                       <button onClick={() => console.log('loading pdf in another page')}>My Resume<ArrowRightCircleFill size={25} /></button>
+                  </Col>
+                  <Col xs={12} md={6} xl={5}>  
+                  <img src={""} alt="Header Img"/>  
                   </Col>
       
                             

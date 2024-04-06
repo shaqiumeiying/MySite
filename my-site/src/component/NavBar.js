@@ -5,8 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../assets/img/logo.png';
 import LinkedIn from '../assets/img/linkedin.png';
 import Steam from '../assets/img/steam.png';
-import Insta from '../assets/img/insta.png';
-import Bilibili from '../assets/img/bilibili.png';
+import GitHub from '../assets/img/github.png';
+
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -32,7 +32,7 @@ export const NavBar = () => {
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ''}>
             <Container>
-                <Navbar.Brand href="#home">Diana's Site
+                <Navbar.Brand href="#home">
                     <img src={Logo} alt="Logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -47,9 +47,9 @@ export const NavBar = () => {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="https://www.linkedin.com/in/xinyi-dou/"  target="_blank"><img src={LinkedIn} alt="" /></a>
-                            <a href="https://space.bilibili.com/4524892"  target="_blank"><img src={Bilibili} alt="" /></a>
-                            <a href="https://steamcommunity.com/profiles/76561198165851652/"  target="_blank"><img src={Steam} alt="Steam Profile" /></a>
+                            <a href="https://www.linkedin.com/in/xinyi-dou/"  target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt="LinkedIn" /></a>
+                            <a href="https://github.com/shaqiumeiying"  target="_blank" rel="noopener noreferrer"><img src={GitHub} alt="GitHub" /></a>
+                            <a href="https://steamcommunity.com/profiles/76561198165851652/"  target="_blank" rel="noopener noreferrer"><img src={Steam} alt="Steam Profile" /></a>
                         </div>
                         <button className="vvd" onClick={() => console.log('Contact Me')}>Contact Me!</button>
                     </span>

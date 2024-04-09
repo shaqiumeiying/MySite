@@ -1,0 +1,11 @@
+Model Information:
+* title:	Tako Ice Cream
+* source:	https://sketchfab.com/3d-models/tako-ice-cream-a62f6338aeeb418091d9d3f379508fb3
+* author:	BunnyGame (https://sketchfab.com/bunnyGame)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Tako Ice Cream" (https://sketchfab.com/3d-models/tako-ice-cream-a62f6338aeeb418091d9d3f379508fb3) by BunnyGame (https://sketchfab.com/bunnyGame) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

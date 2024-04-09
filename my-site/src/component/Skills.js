@@ -64,14 +64,14 @@ export const Skills = () => {
                                 <div className="skill-card">
                                     <img src={css} alt="" />
                                     <h4>CSS</h4>
-                                </div>        
-                                <div className="skill-card">
-                                    <img src={R} alt="" />
-                                    <h4>R</h4>
-                                </div>
+                                </div> 
                                 <div className="skill-card">
                                     <img src={sql} alt="" />
                                     <h4>SQL</h4>
+                                </div>       
+                                <div className="skill-card">
+                                    <img src={R} alt="" />
+                                    <h4>R</h4>
                                 </div>
                             </Carousel>
                         </div>

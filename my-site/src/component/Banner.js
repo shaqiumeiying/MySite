@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircleFill } from "react-bootstrap-icons";
 
-
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -62,23 +61,16 @@ export const Banner = () => {
         <div className="banner-content">
           <Container>
               <Row className="align-items-center">
-                  <Col xs={12} md={6} xl={7}>   
-                      <span className="tagline">Welcome to my Protfolio</span>
-                      <h1>{`I'm Diana , I Love `}<span className="wrap">{text}</span></h1>
-                      <br></br>
-                      <p>This is a placeholder for about me This is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about meThis is a placeholder for about me</p>
-                      <br></br>
+                  <Col xs={12} md={12} xl={12}>   
+                      <span className="tagline">Welcome to my Portfolio</span>
+                      <h1>{`I Love `}<span className="wrap">{text}</span></h1>
+                      <br />
+                      <p>This is a placeholder for about me. This is a placeholder for about me. This is a placeholder for about me. This is a placeholder for about me. This is a placeholder for about me. This is a placeholder for about me. This is a placeholder for about me. This is a placeholder for about me. This is a placeholder for about me.</p>
+                      <br />
                       <button onClick={() => console.log('loading pdf in another page')}>My Resume<ArrowRightCircleFill size={25} /></button>
                   </Col>
-                  <Col xs={12} md={6} xl={5}>  
-                  <img src={""} alt="Header Img"/>  
-                  </Col>
-      
-                            
-               
               </Row>
           </Container>
-        
         </div>
       </section>
   );

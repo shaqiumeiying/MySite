@@ -2,8 +2,10 @@ import React from 'react';
 import { NavBar } from './component/NavBar';
 import { Banner } from './component/Banner';
 import { Skills } from './component/Skills';
-import './App.css';
+import { Projects } from './component/Projects';
 
+
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -12,9 +14,11 @@ function App() {
       <NavBar />
       <Banner />
       <Skills />
+      <Projects/>
     </div>
   );
 }
 
 export default App;
+
 

@@ -8,6 +8,7 @@ import Steam from '../assets/img/steam.png';
 import GitHub from '../assets/img/github.png';
 
 
+
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
@@ -47,9 +48,9 @@ export const NavBar = () => {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="https://www.linkedin.com/in/xinyi-dou/"  target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt="LinkedIn" /></a>
-                            <a href="https://github.com/shaqiumeiying"  target="_blank" rel="noopener noreferrer"><img src={GitHub} alt="GitHub" /></a>
-                            <a href="https://steamcommunity.com/profiles/76561198165851652/"  target="_blank" rel="noopener noreferrer"><img src={Steam} alt="Steam Profile" /></a>
+                            <a href=""  target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt="LinkedIn" /></a>
+                            <a href=""  target="_blank" rel="noopener noreferrer"><img src={GitHub} alt="GitHub" /></a>
+                            <a href=""  target="_blank" rel="noopener noreferrer"><img src={Steam} alt="Steam Profile" /></a>
                         </div>
                         <button className="vvd" onClick={() => console.log('Contact Me')}>Contact Me!</button>
                     </span>

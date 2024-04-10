@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-three/drei": "^9.105.1",
+    "@mediapipe/tasks-vision": "^0.10.12",
+    "@react-three/drei": "^9.105.3",
     "@react-three/fiber": "^8.16.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -16,7 +17,9 @@
     "react-bootstrap-icons": "^1.11.3",
     "react-dom": "^18.2.0",
     "react-multi-carousel": "^2.8.5",
-    "react-scripts": "^3.0.1",
+    "react-on-screen": "^2.1.1",
+    "react-scripts": "5.0.0",
+    "styled-components": "^6.1.8",
     "three": "^0.163.0",
     "web-vitals": "^2.1.4"
   },

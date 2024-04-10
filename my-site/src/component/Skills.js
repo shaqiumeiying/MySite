@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";

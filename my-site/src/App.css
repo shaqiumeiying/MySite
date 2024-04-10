@@ -26,15 +26,16 @@
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
-  position: fixed;
-  width: 100%;
+  position: sticky;
   top: 0;
   z-index: 9999;
-  transition:  0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  text-align: center; /* Center the content horizontally */
 }
+
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-color: #1a1818ec;
 }
 nav.navbar a.navbar-brand {
     width: 10%;
@@ -176,7 +177,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   position: relative;
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 260px 0 150px 0;
   /* background-image: url(''); */
   background-position: top center;
   background-size: cover;
@@ -299,7 +300,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-color: rgb(36, 32, 32);
+  border-radius: 60px;
 }
 .project h2 {
 	font-size: 45px;

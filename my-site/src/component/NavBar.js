@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -48,8 +48,8 @@ export const NavBar = () => {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href=""  target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt="LinkedIn" /></a>
-                            <a href=""  target="_blank" rel="noopener noreferrer"><img src={GitHub} alt="GitHub" /></a>
+                            <a href="https://www.linkedin.com/in/xinyi-dou/"  target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt="LinkedIn" /></a>
+                            <a href="https://github.com/shaqiumeiying"  target="_blank" rel="noopener noreferrer"><img src={GitHub} alt="GitHub" /></a>
                             <a href=""  target="_blank" rel="noopener noreferrer"><img src={Steam} alt="Steam Profile" /></a>
                         </div>
                         <button className="vvd" onClick={() => console.log('Contact Me')}>Contact Me!</button>

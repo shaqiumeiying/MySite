@@ -12,8 +12,9 @@ import ac from "../assets/img/ac.svg";
 import unity from "../assets/img/unity.svg";
 import blender from "../assets/img/blender.svg";
 import figma from "../assets/img/figma.svg";
-import pr from "../assets/img/pr.svg";
-import colorSharp from "../assets/img/color-sharp.png";
+import adb from "../assets/img/adb.png";
+
+
 
 
 export const Skills = () => {
@@ -89,8 +90,8 @@ export const Skills = () => {
                                     <h5>Unity</h5>
                                 </div>
                                 <div className="skill-card">
-                                    <img src={pr} alt="" />
-                                    <h5>Adobe Premiere</h5>
+                                    <img src={adb} alt="" />
+                                    <h5>Adobe Francise</h5>
                                 </div>
                                 <div className="skill-card">
                                     <img src={figma} alt="" />
@@ -109,7 +110,6 @@ export const Skills = () => {
                 </Row>
                 
             </Container>
-            <img className="background-image-left" scr={colorSharp} />
 
         </section>
       )

@@ -8,7 +8,7 @@ import MyModel from './component/MyModel';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
-import { Misc } from './component/Misc';
+import { Project } from './component/Project';
 
 function App() {
   return (
@@ -17,10 +17,9 @@ function App() {
       <Banner />
       <Skills />
       <MyModel />
-      <Misc />
+      <Project />
       <Test />
     </Container>
-    
   );
 }
 

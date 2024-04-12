@@ -1,9 +1,9 @@
 import React from 'react';
 import { Col, Row, Container, Tab } from 'react-bootstrap';
-import { MiscCard } from './MiscCard';
+import { ProjCard } from './ProjCard';
 import Nav from 'react-bootstrap/Nav';
 
-export const Misc = () => {
+export const Project = () => {
 
     const projects = [
       {title: "UBC Insights", 
@@ -20,19 +20,19 @@ export const Misc = () => {
       img: "img"} 
     ]
     return (
-        <section className="project" id="misc">
+        <section className="project">
             <Container>
                 <Row>
                     <Col>
-                        <h3>Showcases</h3>
+                        <h3>Projects</h3>
                         <p>"find some quotes about projects"</p>   
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                      <Nav.Link eventKey="first">Code-based</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Arts & Stuff</Nav.Link>
+                      <Nav.Link eventKey="second">Design-based</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">Social Media</Nav.Link>
@@ -44,7 +44,7 @@ export const Misc = () => {
                       {
                           projects.map((project, index) => {
                             return (
-                              <MiscCard key={index} {...project}/>
+                              <ProjCard key={index} {...project}/>
                             )
                           })
                         }

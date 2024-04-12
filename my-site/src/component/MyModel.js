@@ -11,6 +11,7 @@ const Container = styled.div`
 
 const MyModel = () => {
     return (
+        <section id="projects">
         <Container>
         <Canvas camera={{fov:75, position:[5,5,10]}}>
             <Stage environment="city" intensity={0.6}>
@@ -22,6 +23,7 @@ const MyModel = () => {
             autoRotateSpeed={1.8}/>
         </Canvas>
         </Container>
+        </section>
 
     );
 };

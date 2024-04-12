@@ -1,13 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ArrowRightCircleFill } from "react-bootstrap-icons";
-import logo from '../assets/img/logo.png';
 import { MeshDistortMaterial, Sphere, OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
 import myCV from '../assets/cv.pdf';
-import hero from '../assets/img/hero.png';
 import heroleg from '../assets/img/hero-leg.png';
+import hlh from '../assets/img/hero-leg-high-sat.png';
 
 const Container = styled.div`
   height: 650px;
@@ -39,28 +38,36 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 400px;
-  height: 300px;
+  width: 35%;
+  height: auto;
+  margin-left: 40px;
   object-fit: contain;
   position: absolute;
   top: 0;
-  left: 50%; 
-  transform: translateX(-50%); 
-  margin-top: 10px; 
-  z-index: 1; 
-  animation: animate 2s infinite ease alternate;
+  left: 50%;
+  margin-top: 10px;
+  z-index: 1;
+  animation: updown 9s ease infinite;
 
   @media only screen and (max-width: 990px) {
     width: 300px;
     height: 300px;
   }
 
-  @keyframes animate {
-    to {
-      transform: translateY(20px);
+  @keyframes updown {
+    0% {
+      transform: translateY(-15px);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+    100% {
+      transform: translateY(-15px);
     }
   }
+
 `;
+
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -154,11 +161,11 @@ export const Banner = () => {
                     <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={2}/>
                     <ambientLight intensity={1} />
                     <directionalLight position={[3,2,1]} />
-                    <Sphere args={[1, 100, 200]} scale={1.55}>
+                    <Sphere args={[1, 100, 200]} scale={1.55}>y
                     <MeshDistortMaterial color={color} attach="material" distort={.5} speed={1.3}/>
                     </Sphere>
               </Canvas>
-              <Img src={heroleg} alt="hero"/>
+              <Img src={hlh} alt="hero"/>
               </Right>
           </Container>
         </div>

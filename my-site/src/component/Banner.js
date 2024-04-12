@@ -6,6 +6,8 @@ import { MeshDistortMaterial, Sphere, OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
 import myCV from '../assets/cv.pdf';
+import hero from '../assets/img/hero.png';
+import heroleg from '../assets/img/hero-leg.png';
 
 const Container = styled.div`
   height: 650px;
@@ -142,7 +144,7 @@ export const Banner = () => {
                 <h1>{`I Love `}<span className="wrap">{text}</span></h1>
                 <br />
                 <p>Hey😊 I'm Diana, an undergraduate student excitedly gearing up for the next chapter in my academic and professional adventure!</p> 
-                <p>With a solid background in Computer Science, I'm passionate about all things and am ready to explore the unknown. Through hands-on projects, internships, and academic pursuits, my journey so far has equipped me with strong skill sets.</p> 
+                <p>With a solid background in Computer Science, I'm passionate about all things and am ready to explore the unknown.</p> 
                 <p>Scroll down to join my world of experiences, achievements, and dreams!</p>
                 <br />
                 <button onClick={handleButtonClick}>My Resume<ArrowRightCircleFill size={25} /></button>
@@ -155,8 +157,8 @@ export const Banner = () => {
                     <Sphere args={[1, 100, 200]} scale={1.55}>
                     <MeshDistortMaterial color={color} attach="material" distort={.5} speed={1.3}/>
                     </Sphere>
-                </Canvas>
-                {/* <Img src={logo} alt="hero"/> */}
+              </Canvas>
+              <Img src={heroleg} alt="hero"/>
               </Right>
           </Container>
         </div>

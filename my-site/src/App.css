@@ -177,7 +177,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   position: relative;
   margin-top: 0;
-  padding: 260px 0 150px 0;
+  padding: 260px 0 100px 0;
   /* background-image: url(''); */
   background-position: top center;
   background-size: cover;
@@ -239,8 +239,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 25px;
 }
 .banner img {
-  animation: updown 3s linear infinite;
+  animation: updown 10s ease infinite;
+  width: 35%; /* Set the width to 100% */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 40px;
 }
+
+
 @keyframes updown {
     0% {
         transform: translateY(-20px);
@@ -462,12 +467,6 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -477,10 +476,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage } from '@react-three/drei';
+import Donut from './Donut';
 import Icecream from './Icecream';
+import Kid from './Kid';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -13,14 +15,17 @@ const MyModel = () => {
     return (
         <section id="projects">
         <Container>
-        <Canvas camera={{fov:75, position:[5,5,10]}}>
-            <Stage environment="city" intensity={0.6}>
-            <Icecream/>
+        <Canvas camera={{position: [0,10,5], fov: 20}}>
+            <Stage environment="city" intensity={0.8} scale={[1, 1, 1]} position={[0, 0, 0]} >
+            <Kid/>
             </Stage>
             <OrbitControls 
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+            autoRotate={true}
+            autoRotateSpeed={0.7}
             enableZoom={false}
-            autoRotate={true} 
-            autoRotateSpeed={1.8}/>
+            />
         </Canvas>
         </Container>
         </section>

@@ -1,3 +1,3 @@
 # MySite
 
-i want to make my own website
+i'm making my own website :)

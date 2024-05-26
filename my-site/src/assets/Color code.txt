@@ -8,3 +8,6 @@ Darker:
 
 #60C8A6
 #C2517D
+
+#FFB3CD
+#97E7E3

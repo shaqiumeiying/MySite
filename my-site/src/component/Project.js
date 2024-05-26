@@ -2,22 +2,26 @@ import React from 'react';
 import { Col, Row, Container, Tab } from 'react-bootstrap';
 import { ProjCard } from './ProjCard';
 import Nav from 'react-bootstrap/Nav';
+import uw from '../assets/img/uw.png';
 
 export const Project = () => {
 
     const projects = [
       {title: "UBC Insights", 
       description: "Description 1", 
-      img: "img"}, 
+      img: uw,
+      demo:""}, 
       {title: "Underwater Scene - Animation", 
       description: "Description 2", 
-      img: "img"},
+      img: uw,
+      demo:"https://shaqiumeiying.github.io/Underwater-Scene---Javascript-Animation/",
+      code:"https://github.com/shaqiumeiying/Underwater-Scene---Javascript-Animation"},
       {title: "Todo List", 
       description: "Description 3", 
-      img: "img"},
+      img: uw},
       {title: "Embed 3d model", 
       description: "Description 4", 
-      img: "img"} 
+      img: uw} 
     ]
     return (
         <section className="project">
@@ -29,13 +33,13 @@ export const Project = () => {
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Code-based</Nav.Link>
+                      <Nav.Link eventKey="first">Code</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Design-based</Nav.Link>
+                      <Nav.Link eventKey="second">Design</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Social Media</Nav.Link>
+                      <Nav.Link eventKey="third">Creation</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content>
@@ -50,7 +54,7 @@ export const Project = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
+                    <Tab.Pane eventKey="second">
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">

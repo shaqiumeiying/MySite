@@ -5,7 +5,7 @@ import { MeshDistortMaterial, Sphere, OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
 import myCV from '../assets/cv.pdf';
-import heroleg from '../assets/img/hero-leg.png';
+import ochero from '../assets/img/hero oc.png'
 import hlh from '../assets/img/hero-leg-high-sat.png';
 
 const Container = styled.div`
@@ -38,14 +38,14 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 35%;
+  width: 66%;
   height: auto;
-  margin-left: 40px;
+  margin-left: 50px;
   object-fit: contain;
   position: absolute;
-  top: 0;
-  left: 50%;
-  margin-top: 10px;
+  bottom: 15%;
+  left: 30%;
+  margin-top: 0px;
   z-index: 1;
   animation: updown 9s ease infinite;
 
@@ -80,12 +80,12 @@ export const Banner = () => {
     const wordDelay = 1000; // Adjust the duration of the pause before each word starts typing
 
     // Set color transition
-    const [color, setColor] = useState(new THREE.Color('#FFB0CC'));
+    const [color, setColor] = useState(new THREE.Color('#FFB3CD'));
 
     useEffect(() => {
       const updateColor = () => {
-        const t = (Math.sin(Date.now() * 0.0001) + 1) / 2; 
-        const newColor = new THREE.Color().lerpColors(new THREE.Color('#FFB0CC'), new THREE.Color('#8CFFD8'), t);
+        const t = (Math.sin(Date.now() * 0.0008) + 1) / 2; 
+        const newColor = new THREE.Color().lerpColors(new THREE.Color('#FFB3CD'), new THREE.Color('#97E7E3'), t);
         setColor(newColor);
 
         requestAnimationFrame(updateColor);
@@ -161,11 +161,11 @@ export const Banner = () => {
                     <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={2}/>
                     <ambientLight intensity={1} />
                     <directionalLight position={[3,2,1]} />
-                    <Sphere args={[1, 100, 200]} scale={1.55}>y
+                    <Sphere args={[1, 100, 200]} scale={1.35}>
                     <MeshDistortMaterial color={color} attach="material" distort={.5} speed={1.3}/>
                     </Sphere>
               </Canvas>
-              <Img src={hlh} alt="hero"/>
+              <Img src={ochero} alt="hero"/> 
               </Right>
           </Container>
         </div>

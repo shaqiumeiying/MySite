@@ -1,8 +1,6 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage } from '@react-three/drei';
-import Donut from './Donut';
-import Icecream from './Icecream';
 import Kid from './Kid';
 import styled from 'styled-components';
 

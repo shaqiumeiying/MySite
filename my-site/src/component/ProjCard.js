@@ -19,10 +19,10 @@ export const ProjCard = ({ title, description, img, demo, code}) => {
           <span>{description}</span>
           <br />
           <br />
-          <Button onClick={handleDemo} variant="primary" style={{ marginRight: '10px' }}>
+          <Button onClick={handleDemo} variant="dark" style={{ marginRight: '10px' }}>
             Demo
           </Button>
-          <Button onClick={handleCode} variant="primary" style={{ paddingLeft: '16px', paddingRight: '16px'}}>
+          <Button onClick={handleCode} variant="dark" style={{ paddingLeft: '16px', paddingRight: '16px'}}>
             Code
           </Button>
         </div>

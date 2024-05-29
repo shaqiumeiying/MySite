@@ -6,7 +6,6 @@ import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
 import myCV from '../assets/cv.pdf';
 import ochero from '../assets/img/hero oc.png'
-import hlh from '../assets/img/hero-leg-high-sat.png';
 
 const Container = styled.div`
   height: 650px;
@@ -43,8 +42,8 @@ const Img = styled.img`
   margin-left: 50px;
   object-fit: contain;
   position: absolute;
-  bottom: 15%;
-  left: 30%;
+  bottom: 20%;
+  left: 33%;
   margin-top: 0px;
   z-index: 1;
   animation: updown 9s ease infinite;

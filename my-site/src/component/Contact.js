@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useState } from 'react';
 import Container from 'react-bootstrap/esm/Container';
-// import contact from '../assets/img/contact.png';
+import cheader from '../assets/img/contact header.png';
 
 
 export const Contact = () => {
@@ -53,6 +53,10 @@ export const Contact = () => {
     }
 
     return (
+        <>
+        <div className="contact-image-container">
+        <img src={cheader} alt="Contact Me" className="contact-image" />
+        </div>
         <section className="contact" id="connect">
             <Container>
                 <Row className="align-items-center">
@@ -91,6 +95,7 @@ export const Contact = () => {
                 </Row>
             </Container>
         </section>
+        </>
 
 
     )

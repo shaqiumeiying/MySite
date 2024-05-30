@@ -411,11 +411,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /* Contact */
+.contact-container {
+  position: relative;
+}
+
+.contact-image-container {
+  padding-right: 40px;
+}
+
+.contact-image {
+  width: 100%;
+}
+
 .contact {
   background: linear-gradient(60deg, #60C8A6 -10%, #C2517D 110%);
   padding: 80px 50px 80px 50px;
-  border-radius: 60px;
+  border-radius: 6px 60px 60px 60px;
+  position: relative;
+  z-index: 0;
 }
+
+
 .contact img {
   width: 92%;
 }
@@ -488,15 +504,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 200px 0 50px 0;
-  background-image: url('./assets/img/hero.png'); /* Add your image path */
+  padding: 50px 0 50px 0;
+  background-image: url(''); /* Add your image path */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .footer img {
-  width: 6%;
+  width: 30%;
 }
 .footer p {
   font-weight: 400;

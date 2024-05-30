@@ -192,7 +192,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90deg, rgba(42, 121, 94, .8) -10%, rgba(111, 51, 74, .8) 110%);
+  background: linear-gradient(75deg, rgba(42, 121, 94, .8) -10%, rgba(111, 51, 74, .8) 70%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
@@ -333,7 +333,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90deg, #60C8A6 -5.91%, #C2517D 111.58%);
+    background: linear-gradient(60deg, #60C8A6 -10%, #C2517D 110%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -365,7 +365,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90deg, #60C8A6 -5.91%, #C2517D 111.58%);
+  background: linear-gradient(60deg, #60C8A6 -10%, #C2517D 110%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -408,6 +408,102 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 35%;
   right: 0;
   z-index: -4;
+}
+
+/* Contact */
+.contact {
+  background: linear-gradient(60deg, #60C8A6 -10%, #C2517D 110%);
+  padding: 80px 50px 80px 50px;
+  border-radius: 60px;
+}
+.contact img {
+  width: 92%;
+}
+.contact h2 {
+	font-size: 45px;
+	font-weight: 700;
+  margin-bottom: 30px;
+}
+.contact form input, .contact form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 0 8px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+.contact form input:focus, .contact form textarea:focus {
+  background: rgb(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+}
+.contact form button {
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 10px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 20px;
+  border: 5px solid #fff;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+.contact form button:hover {
+  color: #fff;
+}
+.contact form button::before {
+  content: "";
+  background: linear-gradient(-60deg, #8fd1bb -10%, #d68aa7 110%);
+  border-radius: 20px;
+  
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.contact form button:hover::before {
+  width: 100%;
+}
+
+/************ Footer Css ************/
+.footer {
+  padding: 200px 0 50px 0;
+  background-image: url('./assets/img/hero.png'); /* Add your image path */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer img {
+  width: 6%;
+}
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #B8B8B8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
 }
 
 /* Default CSS */

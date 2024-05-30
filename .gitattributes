@@ -1,1 +1,2 @@
 my-site/public/2kids.gltf filter=lfs diff=lfs merge=lfs -text
+compressed.gltf filter=lfs diff=lfs merge=lfs -text

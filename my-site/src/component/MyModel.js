@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import styled from 'styled-components';
-import Kid from './2kids';
+import Kid from './Compressed';
 
 const Container = styled.div`
   height: 500px;
@@ -34,7 +34,6 @@ const MyModel = () => {
   const canvasRef = useRef(null); // Ref to access the Canvas component
 
   useEffect(() => {
-    // Add event listener to listen for window resize
     const handleResize = () => {
       setShowModel(window.innerWidth > 990); // Set visibility based on window size
       if (canvasRef.current && canvasRef.current.camera) {
@@ -45,7 +44,6 @@ const MyModel = () => {
     window.addEventListener('resize', handleResize);
     handleResize(); // Call handleResize initially
 
-    // Cleanup function to remove event listener
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -58,7 +56,7 @@ const MyModel = () => {
   return (
     <section id="projects">
       <Container showModel={showModel}>
-      <InstructionText>Drag to rotate the model, scroll to zoom</InstructionText>
+        <InstructionText>Drag to rotate, scroll to zoom</InstructionText>
         {loading && <LoadingText>Loading 3D Model...</LoadingText>}
         <Canvas
           ref={canvasRef} // Assign the ref to the Canvas component
@@ -83,10 +81,10 @@ const MyModel = () => {
             maxDistance={15}
           />
         </Canvas>
-
       </Container>
     </section>
   );
 };
 
 export default MyModel;
+

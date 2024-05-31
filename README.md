@@ -1,5 +1,5 @@
 
-# ![MySite](my-site\src\assets\readme\image.png)
+# ![MySite](src/assets/readme/image.png)
 # Welcome to my Protfolio✨
 <table>
 <tr>
@@ -19,27 +19,27 @@ This is my personal portfolio website, a showcase of my capabilities and ongoing
 ### Home
 The home page of my site. `LinkedIn`, `Github` and `Steam` link in the Navigation bar, and below is a link to my resume.
 
-# ![Home](my-site\src\assets\readme\image.png)
+# ![Home](src/assets/readme/image.png)
 
 ### Skills
 A Carousel/Slider showcasing my technical skills and tools i'm familiar with.
-# ![Skills](my-site\src\assets\readme\image-1.png)
+# ![Skills](src/assets/readme/image-1.png)
 
 ### 3D Model Showcase
 Interactable 3d model, they are also the models for the banner and the theme of this website 🍓🍇
 
-# ![3D Model](my-site\src\assets\readme\image-6.png)
+# ![3D Model](src/assets/readme/image-6.png)
 
 ### Projects
 Project showcases with demo link and code sources. Some are still in progress.
 
- ![Code](my-site\src\assets\readme\image-2.png)
- ![Design](my-site\src\assets\readme\image-3.png)
-# ![Create](my-site\src\assets\readme\image-4.png)
+ ![Code](src/assets/readme/image-2.png)
+ ![Design](src/assets/readme/image-3.png)
+# ![Create](src/assets/readme/image-4.png)
 
 
 ### Contact Form
-![Contact Form](my-site\src\assets\readme\image-8.png)
+![Contact Form](src/assets/readme/image-8.png)
 
 Cute 3D animation with image transitions and sound effects upon sending the message. Your request will be sent to my mailbox, and I typically respond within 2-3 days.
 
@@ -49,7 +49,7 @@ Cute 3D animation with image transitions and sound effects upon sending the mess
 The Website is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
 
 <div style="text-align: center;">
-<img src="my-site\src\assets\readme\image-5.png" alt="Mobile Support" style="width: 300px;">
+<img src="src/assets/readme/image-5.png" alt="Mobile Support" style="width: 300px;">
 </div>
 
 ## Built with 

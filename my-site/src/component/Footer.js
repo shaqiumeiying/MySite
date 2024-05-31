@@ -18,7 +18,8 @@ export const Footer = () => {
               <a href="#"><img src={GitHub} alt="Icon" /></a>
               <a href="#"><img src={Steam} alt="Icon" /></a>
             </div>
-            <p>Copyright 2024. All Rights Reserved</p>
+            <p>Copyright © 2024 <a href="https://github.com/yourusername">Xinyi Dou</a>. All rights reserved. </p>
+
           </Col>
         </Row>
       </Container>

@@ -44,12 +44,12 @@ export const Project = () => {
       demo:"https://www.youtube.com/watch?v=uTztjAcvb94"}
     ]
     return (
-        <section className="project">
+        <section className="project" id="project">
             <Container>
                 <Row>
                     <Col style={{ paddingLeft: '20px', paddingRight: '20px' }}>
                         <h3>Projects</h3>
-                        <p>"find some quotes about projects"</p>   
+                        <p>"Engaging in diverse projects is vital for skill development, offering opportunities to tackle various challenges and refine expertise."</p>   
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -59,7 +59,7 @@ export const Project = () => {
                       <Nav.Link eventKey="second">Design</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Creation</Nav.Link>
+                      <Nav.Link eventKey="third">Create</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content>

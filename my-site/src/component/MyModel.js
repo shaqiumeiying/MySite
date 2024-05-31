@@ -54,7 +54,7 @@ const MyModel = () => {
   }, []);
 
   return (
-    <section id="projects">
+    <section id="model">
       <Container showModel={showModel}>
         <InstructionText>Drag to rotate, scroll to zoom</InstructionText>
         {loading && <LoadingText>Loading 3D Model...</LoadingText>}

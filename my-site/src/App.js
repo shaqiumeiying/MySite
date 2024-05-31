@@ -20,7 +20,7 @@ function App() {
       <Skills />
       <MyModel />
       <Project />
-      <Test />
+      <br></br>
       <Contact />
       <Footer />
     </Container>

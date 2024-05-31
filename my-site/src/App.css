@@ -411,6 +411,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /* Contact */
+
+.envelope-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px; 
+}
+
+.envelope-image {
+  max-width: 100px;
+  height: auto;
+}
+
+.contact-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .contact-container {
   position: relative;
 }
@@ -419,18 +438,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding-right: 40px;
 }
 
-.contact-image {
-  width: 100%;
+@media (max-width: 990px) {
+  .contact-image-container {
+      display: none;
+  }
 }
 
 .contact {
   background: linear-gradient(60deg, #60C8A6 -10%, #C2517D 110%);
-  padding: 80px 50px 80px 50px;
+  padding: 60px 50px 60px 50px;
   border-radius: 6px 60px 60px 60px;
   position: relative;
   z-index: 0;
 }
-
 
 .contact img {
   width: 92%;

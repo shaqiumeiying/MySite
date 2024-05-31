@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { useState } from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import cheader from '../assets/img/contact header.png';
-
+import csent from '../assets/img/contact sent.png';
+import envelope from '../assets/img/envolope.gif';
+import sent from '../assets/img/sent.png';
 
 export const Contact = () => {
-    const formInitialDetails ={
+    const formInitialDetails = {
         firstName: "",
         lastName: "",
         email: "",
@@ -17,6 +18,7 @@ export const Contact = () => {
     const [details, setDetails] = useState(formInitialDetails);
     const [buttonText, setButtonText] = useState("Send");
     const [status, setStatus] = useState({});
+    const [formSubmitted, setFormSubmitted] = useState(false);
 
     const onFormUpdate = (key, value) => {
         setDetails({
@@ -25,8 +27,17 @@ export const Contact = () => {
         });
     }
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
+         if (!details.email) {
+            setStatus({
+                success: false,
+                message: "Cannot send, an email address is required!"
+            });
+            return;
+        }
+
         setButtonText("Sending...");
         let response = await fetch("http://localhost:5000/contact", {
             method: "POST",
@@ -43,60 +54,73 @@ export const Contact = () => {
                 success: true,
                 message: "Email Sent Successfully"
             });
+            setFormSubmitted(true);
         } else {
             setStatus({
-                sucesss: false,
+                success: false,
                 message: "Failed to send email"
             });
         }
-
     }
 
     return (
         <>
-        <div className="contact-image-container">
-        <img src={cheader} alt="Contact Me" className="contact-image" />
+       <div className="contact-image-container">
+            <img src={formSubmitted ? csent : cheader} alt="Contact Me" className="contact-image" />
         </div>
         <section className="contact" id="connect">
             <Container>
                 <Row className="align-items-center">
-                    <Col md={6}>
-                        <img src={""} alt="Contact Me"/>
-                    </Col>
-                    <Col md={6}>
-                        <h2>Connect with me</h2>
-                        <form onSubmit={handleSubmit}>
-                            <Row>
-                                <Col sm={6} className="px-1">
-                                    <input type="text" placeholder="First Name" value={details.firstName} onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                    {formSubmitted ? (
+                        <Col md={12}>
+                            <img src={sent} alt="Email Sent Image" style={{ width: '200px', height: 'auto' }} />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <p><strong>Message received!</strong></p>
+                            <br />
+                            <p><strong>I'll get back to you asap, thanks :)</strong></p>
+                        </Col>
+                    ) : (
+                        <>
+                            <Col md={6}>
+                            <img src={envelope} alt="envelope.gif"></img>
+                            </Col>                                
+                            <Col md={6}>
+                                <h2>Connect with me</h2>
+                                    <form onSubmit={handleSubmit}>
+                                        <Row>
+                                            <Col sm={6} className="px-1">
+                                                <input type="text" placeholder="First Name" value={details.firstName} onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                                            </Col>
+                                            <Col sm={6} className="px-1">
+                                                <input type="text" placeholder="Last Name" value={details.lastName} onChange={(e) => onFormUpdate('lastName', e.target.value)} />
+                                            </Col>
+                                            <Col sm={6} className="px-1">
+                                                <input type="email" placeholder="Email Address" value={details.email} onChange={(e) => onFormUpdate('email', e.target.value)} />
+                                            </Col>
+                                            <Col sm={6} className="px-1">
+                                                <input type="tel" placeholder="Tel" value={details.phone} onChange={(e) => onFormUpdate('phone', e.target.value)} />
+                                            </Col>
+                                            <Col sm={12} className="px-1">
+                                                <textarea rows="6" placeholder="Message" value={details.message} onChange={(e) => onFormUpdate('message', e.target.value)} />
+                                            </Col>
+                                            <button type="submit" style={{ alignItems: 'center' }}><span>{buttonText}</span></button>
+                                            {
+                                                status.success !== undefined &&
+                                                (<Col>
+                                                    <p className={status.success ? "success" : "danger"}>{status.message}</p>
+                                                </Col>)
+                                            }
+                                        </Row>
+                                    </form>
                                 </Col>
-                                <Col sm={6} className="px-1">
-                                    <input type="text" placeholder="Last Name" value={details.lastName} onChange={(e) => onFormUpdate('lastName', e.target.value)} />
-                                </Col>
-                                <Col sm={6} className="px-1">
-                                    <input type="email" placeholder="Email Address" value={details.email} onChange={(e) => onFormUpdate('email', e.target.value)} />
-                                </Col>
-                                <Col sm={6} className="px-1">
-                                    <input type="tel" placeholder="Tel" value={details.phone} onChange={(e) => onFormUpdate('phone', e.target.value)} />
-                                </Col>
-                                <Col sm={6} className="px-1">
-                                    <textarea row="6" placeholder="Message" value={details.message} onChange={(e) => onFormUpdate('message', e.target.value)} />
-                                    <button type="submit"><span>{buttonText}</span></button>
-                                </Col>
-                                {
-                                    status.success !== undefined &&
-                                    (<Col>
-                                    <p className={status.success ? "success" : "danger"}>{status.message}</p>
-                                    </Col>)
-                                }
-                            </Row>
-                        </form>
-                    </Col>
-                </Row>
-            </Container>
-        </section>
+                            </>
+                        )}
+                    </Row>
+                </Container>
+            </section>
         </>
-
-
-    )
+    );
 }

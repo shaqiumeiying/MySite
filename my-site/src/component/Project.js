@@ -44,7 +44,7 @@ export const Project = () => {
       demo:"https://www.youtube.com/watch?v=uTztjAcvb94"}
     ]
     return (
-        <section className="project" id="project">
+        <section className="project" id="projects">
             <Container>
                 <Row>
                     <Col style={{ paddingLeft: '20px', paddingRight: '20px' }}>

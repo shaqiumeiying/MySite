@@ -28,18 +28,21 @@ const InstructionText = styled.div`
 
 const MyModel = () => {
   const [loading, setLoading] = useState(true);
-  const [initialPosition] = useState([0, 2, 13]); // Initial camera position
-  const canvasRef = useRef(null); // Ref to access the Canvas component
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [initialPosition] = useState([0, 0, 10]);
+  const canvasRef = useRef(null);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+    if (canvasRef.current && canvasRef.current.camera) {
+      canvasRef.current.camera.position.set(...initialPosition);
+      canvasRef.current.camera.updateMatrixWorld();
+    }
+  };
 
   useEffect(() => {
-    const handleResize = () => {
-      if (canvasRef.current && canvasRef.current.camera) {
-        canvasRef.current.camera.position.set(...initialPosition); // Set the camera position when resizing
-        canvasRef.current.camera.updateMatrixWorld(); // Update camera matrix world
-      }
-    };
     window.addEventListener('resize', handleResize);
-    handleResize(); // Call handleResize initially
+    handleResize(); // Initial check
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -48,8 +51,12 @@ const MyModel = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer); // Clear the timer on component unmount
+    return () => clearTimeout(timer);
   }, []);
+
+  if (windowWidth <= 990) {
+    return null;
+  }
 
   return (
     <section id="model">
@@ -57,13 +64,13 @@ const MyModel = () => {
         <InstructionText>Drag to rotate, scroll to zoom</InstructionText>
         {loading && <LoadingText>Loading 3D Model...</LoadingText>}
         <Canvas
-          ref={canvasRef} // Assign the ref to the Canvas component
+          ref={canvasRef}
           camera={{ position: initialPosition, fov: 30 }}
         >
           <Stage
             environment="sunset"
             intensity={0.7}
-            scale={[1, 1, 3]}
+            scale={[1, 1, 1]}
             position={[0, 0, 0]}
             onLoaded={() => setLoading(false)}
           >
@@ -75,8 +82,6 @@ const MyModel = () => {
             autoRotate={true}
             autoRotateSpeed={0.2}
             enableZoom={true}
-            minDistance={10}
-            maxDistance={15}
           />
         </Canvas>
       </Container>
@@ -85,4 +90,3 @@ const MyModel = () => {
 };
 
 export default MyModel;
-

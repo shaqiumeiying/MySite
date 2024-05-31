@@ -17,6 +17,7 @@ function App() {
     <Container className="App">
       <NavBar />
       <Banner />
+      <br/><br/>
       <Skills />
       <MyModel />
       <br/><br/><br/>

@@ -47,7 +47,7 @@ export const Project = () => {
     },
     {
       title: "Original Character Design",
-      description: "Character design inspired by the theme of 'space', created using Blender.",
+      description: "Character design inspired by my favourite fruit and colors *🍉🍇* Created using Blender.",
       img: myoc,
       demo: ""
     },

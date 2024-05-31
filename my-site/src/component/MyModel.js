@@ -8,7 +8,6 @@ const Container = styled.div`
   height: 500px;
   width: 100%;
   position: relative;
-  display: ${(props) => (props.showModel ? 'block' : 'none')};
 `;
 
 const LoadingText = styled.div`
@@ -29,13 +28,11 @@ const InstructionText = styled.div`
 
 const MyModel = () => {
   const [loading, setLoading] = useState(true);
-  const [showModel, setShowModel] = useState(true); // State to control visibility
-  const [initialPosition, setInitialPosition] = useState([0, 2, 13]); // Initial camera position
+  const [initialPosition] = useState([0, 2, 13]); // Initial camera position
   const canvasRef = useRef(null); // Ref to access the Canvas component
 
   useEffect(() => {
     const handleResize = () => {
-      setShowModel(window.innerWidth > 990); // Set visibility based on window size
       if (canvasRef.current && canvasRef.current.camera) {
         canvasRef.current.camera.position.set(...initialPosition); // Set the camera position when resizing
         canvasRef.current.camera.updateMatrixWorld(); // Update camera matrix world
@@ -50,12 +47,13 @@ const MyModel = () => {
   }, [initialPosition]);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer); // Clear the timer on component unmount
   }, []);
 
   return (
     <section id="model">
-      <Container showModel={showModel}>
+      <Container>
         <InstructionText>Drag to rotate, scroll to zoom</InstructionText>
         {loading && <LoadingText>Loading 3D Model...</LoadingText>}
         <Canvas

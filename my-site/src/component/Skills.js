@@ -1,7 +1,11 @@
+import React from 'react';
 import { Col, Row, Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// remember to import images
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+
+// Import images
 import R from "../assets/img/R.svg";
 import js from "../assets/img/js.svg";
 import cp from "../assets/img/CP.svg";
@@ -14,103 +18,75 @@ import blender from "../assets/img/blender.svg";
 import figma from "../assets/img/figma.svg";
 import adb from "../assets/img/adb.png";
 
-
-
-
-export const Skills = () => {
-    const responsive = {
-        superLargeDesktop: {
-          breakpoint: { max: 4000, min: 3000 },
-          items: 5
-        },
-        desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: 3
-        },
-        tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 2
-        },
-        mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 1
-        }
-      };
-
-      return (
-        <section className="skill" id="skills">
-            <Container>
-                <Row>
-                    <Col>
-                        <div className="skill-bx">
-                            <h3>
-                                Technical Skill Sets
-                            </h3>
-                            <p>"find some quotes about skills"</p>
-                            <Carousel responsive={responsive} infinite={true} className="skill-slider">
-                                <div className="skill-card">
-                                    <img src={cp} alt="" />
-                                    <h4>C, C++, C#</h4>
-                                </div>
-                                <div className="skill-card">
-                                    <img src={js} alt="" />
-                                    <h4>JavaScript</h4>
-                                </div>
-                                <div className="skill-card">
-                                    <img src={python} alt="" />
-                                    <h4>Python</h4>
-                                </div>
-                               
-                                <div className="skill-card">
-                                    <img src={css} alt="" />
-                                    <h4>CSS</h4>
-                                </div> 
-                                <div className="skill-card">
-                                    <img src={sql} alt="" />
-                                    <h4>SQL</h4>
-                                </div>       
-                                <div className="skill-card">
-                                    <img src={R} alt="" />
-                                    <h4>R</h4>
-                                </div>
-                            </Carousel>
-                        </div>
-                    </Col>
-                </Row>
-                <br></br>
-                <Row>
-                    <div className="skill-bx">
-                            <h3>
-                                Productivity Tools
-                            </h3>
-                            <p>"find some quotes about skills"</p>
-                            <Carousel responsive={responsive} infinite={true} className="skill-slider">
-                                <div className="skill-card">
-                                    <img src={unity} alt="" />
-                                    <h5>Unity</h5>
-                                </div>
-                                <div className="skill-card">
-                                    <img src={adb} alt="" />
-                                    <h5>Adobe Francise</h5>
-                                </div>
-                                <div className="skill-card">
-                                    <img src={figma} alt="" />
-                                    <h5>Figma</h5>
-                                </div>
-                                <div className="skill-card">
-                                    <img src={blender} alt="" />
-                                    <h5>Blender</h5>
-                                </div>
-                                <div className="skill-card">
-                                    <img src={ac} alt="" />
-                                    <h5>AutoCAD</h5>
-                                </div>
-                            </Carousel>
-                        </div>
-                </Row>
-                
-            </Container>
-
-        </section>
-      )
+const responsive = {
+    superLargeDesktop: {
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 3
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+    }
 };
+
+const skillSets = [
+    { img: cp, name: 'C, C++, C#' },
+    { img: js, name: 'JavaScript' },
+    { img: python, name: 'Python' },
+    { img: css, name: 'CSS' },
+    { img: sql, name: 'SQL' },
+    { img: R, name: 'R' }
+];
+
+const productivityTools = [
+    { img: unity, name: 'Unity' },
+    { img: adb, name: 'Adobe Franchise' },
+    { img: figma, name: 'Figma' },
+    { img: blender, name: 'Blender' },
+    { img: ac, name: 'AutoCAD' }
+];
+
+const SkillCarousel = ({ title, items }) => (
+    <TrackVisibility partialVisibility once>
+        {({ isVisible }) => (
+            <div className={`skill-bx ${isVisible ? "animate__animated animate__fadeInUp" : "hidden"}`}>
+                <h3>{title}</h3>
+                <p>"Find some quotes about skills"</p>
+                <Carousel responsive={responsive} infinite={true} className="skill-slider">
+                    {items.map((item, index) => (
+                        <div className="skill-card" key={index}>
+                            <img src={item.img} alt={item.name} />
+                            <h4>{item.name}</h4>
+                        </div>
+                    ))}
+                </Carousel>
+            </div>
+        )}
+    </TrackVisibility>
+);
+
+export const Skills = () => (
+    <section className="skill" id="skills">
+        <Container>
+            <Row>
+                <Col>
+                    <SkillCarousel title="Technical Skill Sets" items={skillSets} />
+                </Col>
+            </Row>
+            <br /><br /><br /><br />
+            <Row>
+                <Col>
+                    <SkillCarousel title="Productivity Tools" items={productivityTools} />
+                </Col>
+            </Row>
+        </Container>
+    </section>
+);

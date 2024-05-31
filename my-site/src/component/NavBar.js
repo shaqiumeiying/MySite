@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,29 +11,29 @@ export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
+    const handleScroll = useCallback(() => {
+        setScrolled(window.scrollY > 50);
+    }, []);
+
     useEffect(() => {
         const onScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        }
+            requestAnimationFrame(handleScroll);
+        };
 
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
+    }, [handleScroll]);
+
+    const onUpdateActiveLink = useCallback((link) => {
+        setActiveLink(link);
     }, []);
 
-    const onUpdateActiveLink = (link) => {
-        setActiveLink(link);
-    }
-
-    const scrollToContact = () => {
+    const scrollToContact = useCallback(() => {
         const contactSection = document.getElementById('connect');
         if (contactSection) {
             contactSection.scrollIntoView({ behavior: 'smooth' });
         }
-    };
+    }, []);
 
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ''}>
@@ -46,16 +46,33 @@ export const NavBar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>About Me</Nav.Link>
-                        <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                        <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-                        {/* <Nav.Link href="#misc" className={activeLink === 'misc' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('misc')}>Misc</Nav.Link> */}
+                        <Nav.Link 
+                            href="#home" 
+                            className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} 
+                            onClick={() => onUpdateActiveLink('home')}
+                        >
+                            About Me
+                        </Nav.Link>
+                        <Nav.Link 
+                            href="#skills" 
+                            className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} 
+                            onClick={() => onUpdateActiveLink('skills')}
+                        >
+                            Skills
+                        </Nav.Link>
+                        <Nav.Link 
+                            href="#projects" 
+                            className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} 
+                            onClick={() => onUpdateActiveLink('projects')}
+                        >
+                            Projects
+                        </Nav.Link>
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
                             <a href="https://www.linkedin.com/in/xinyi-dou/" target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt="LinkedIn" /></a>
                             <a href="https://github.com/shaqiumeiying" target="_blank" rel="noopener noreferrer"><img src={GitHub} alt="GitHub" /></a>
-                            <a href="" target="_blank" rel="noopener noreferrer"><img src={Steam} alt="Steam Profile" /></a>
+                            <a href="https://steamcommunity.com/profiles/76561198165851652/" target="_blank" rel="noopener noreferrer"><img src={Steam} alt="Steam Profile" /></a>
                         </div>
                         <button className="vvd" onClick={scrollToContact}>Contact Me!</button>
                     </span>

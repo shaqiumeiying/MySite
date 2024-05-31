@@ -1,7 +1,7 @@
-import React from 'react';
 import { Col, Button } from "react-bootstrap";
 
 export const CreationCard = ({ title, description, img, demo }) => {
+  
   const handleDemo = () => {
     window.open(demo, "_blank");
   };

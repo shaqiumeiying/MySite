@@ -19,8 +19,9 @@ function App() {
       <Banner />
       <Skills />
       <MyModel />
+      <br/><br/><br/>
       <Project />
-      <br></br>
+      <br/><br/>
       <Contact />
       <Footer />
     </Container>

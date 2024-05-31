@@ -1,7 +1,7 @@
+import React from "react";
 import { Col, Button } from "react-bootstrap";
 
-export const ProjCard = ({ title, description, img, demo, code}) => {
-
+export const ProjCard = ({ title, description, img, demo, code }) => {
   const handleDemo = () => {
     window.open(demo, "_blank");
   };
@@ -13,7 +13,7 @@ export const ProjCard = ({ title, description, img, demo, code}) => {
   return (
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx">
-        <img src={img} />
+        <img src={img}/>
         <div className="proj-txtx">
           <h4>{title}</h4>
           <span>{description}</span>
@@ -28,5 +28,5 @@ export const ProjCard = ({ title, description, img, demo, code}) => {
         </div>
       </div>
     </Col>
-  )
-}
+  );
+};

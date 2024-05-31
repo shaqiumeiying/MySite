@@ -367,12 +367,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
-  filter: contrast(60%);
 
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(60deg, #68cfad -10%, #c25780 110%);
+  background: linear-gradient(60deg, #70ebc2 -10%, #e66194 110%);
   opacity: 0.85;
   position: absolute;
   width: 100%;

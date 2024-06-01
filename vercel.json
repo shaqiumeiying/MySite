@@ -1,0 +1,14 @@
+{
+    "build": {
+      "env": {
+        "GENERATE_SOURCEMAP": false,
+        "EMAIL_USERNAME": "shaqiumeiying@gmail.com",
+        "EMAIL_PASSWORD": "pqew nphl cntj adji"
+      }
+    },
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/server.js" }
+    ]
+  }
+  
+  

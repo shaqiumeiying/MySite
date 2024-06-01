@@ -42,7 +42,7 @@ const LoadGLTF = () => {
             enableZoom={false}
           />
             <Suspense fallback={null}>
-                <Compressed />
+                <Compressedemb />
             </Suspense>
             <Environment preset="sunset" />
         </Canvas>

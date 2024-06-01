@@ -52,13 +52,14 @@ export const Contact = () => {
 
         setButtonText("Sending...");
         try {
-            const response = await fetch("http://localhost:5000/contact", {
+            const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json;charset=utf-8"
                 },
                 body: JSON.stringify(details)
             });
+            
             const result = await response.json();
             if (result.code === 200) {
                 setStatus({

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
@@ -10,7 +11,7 @@ const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: "shaqiumeiying@gmail.com",
-    pass: "pqew nphl cntj adji",
+    pass: "pigz hqml pnve bkct",
   },
 });
 
@@ -22,7 +23,7 @@ contactEmail.verify((error) => {
   }
 });
 
-app.post("/api/contact", async (req, res) => { // Use async to allow await inside the function
+app.post("/api/contact", (req, res) => {
   const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
@@ -36,17 +37,13 @@ app.post("/api/contact", async (req, res) => { // Use async to allow await insid
            <p>Phone: ${phone}</p>
            <p>Message: ${message}</p>`,
   };
-  
-  try {
-    await contactEmail.sendMail(mail);
-    res.json({ code: 200, status: "Message Sent" });
-  } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).json({ code: 500, status: "Failed to send email" });
-  }
+  contactEmail.sendMail(mail, (error) => {
+    if (error) {
+      res.json(error);
+    } else {
+      res.json({ code: 200, status: "Message Sent" });
+    }
+  });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+module.exports = app;

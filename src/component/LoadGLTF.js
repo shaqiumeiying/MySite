@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Environment, OrbitControls} from '@react-three/drei';
-import Compressed from './Compressed';
+import Scene from './Scene';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -42,7 +42,7 @@ const LoadGLTF = () => {
             enableZoom={false}
           />
             <Suspense fallback={null}>
-                <Compressed />
+                <Scene />
             </Suspense>
             <Environment preset="sunset" />
         </Canvas>

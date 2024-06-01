@@ -59,8 +59,7 @@ const MyModel = () => {
         {loading && <LoadingText>Loading 3D Model...</LoadingText>}
         <Canvas
           ref={canvasRef} 
-          camera={{ position: initialPosition, fov: 30 }}
-        >
+          camera={{ position: initialPosition, fov: 30 }}>
           <Stage
             environment="sunset"
             intensity={0.7}

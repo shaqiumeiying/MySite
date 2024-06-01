@@ -17,11 +17,8 @@ function App() {
     <Container className="App">
       <NavBar />
       <Banner />
-      <br/><br/>
       <Skills />
-      {/* <MyModel /> */}
       <LoadGLTF />
-      <br/><br/><br/>
       <Project />
       <br/><br/>
       <Contact />

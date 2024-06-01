@@ -4,7 +4,6 @@ import { ProjCard } from './ProjCard';
 import { CreationCard } from './CreationCard.js';
 import TrackVisibility from 'react-on-screen';
 
-// Import images
 import uw from '../assets/img/uw.png';
 import insight from '../assets/img/insight ubc.png';
 import todo from '../assets/img/todolist.png';

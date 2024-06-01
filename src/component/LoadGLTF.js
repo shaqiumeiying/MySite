@@ -1,6 +1,6 @@
-import {useState, Suspense } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Environment, OrbitControls, Stage } from '@react-three/drei';
+import { Environment, OrbitControls} from '@react-three/drei';
 import Compressed from './Compressed';
 import styled from 'styled-components';
 
@@ -10,14 +10,14 @@ const Container = styled.div`
   position: relative;
 `;
 
-const LoadingText = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  color: white;
-`;
+// const LoadingText = styled.div`
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   font-size: 24px;
+//   color: white;
+// `;
 
 const InstructionText = styled.div`
   text-align: center;
@@ -33,7 +33,7 @@ const LoadGLTF = () => {
         <Container>
         <InstructionText>Drag to rotate, scroll to zoom</InstructionText>
          <Canvas>
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={0.4} />
             <OrbitControls
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}

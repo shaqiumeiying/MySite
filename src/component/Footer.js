@@ -14,9 +14,9 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={10} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#"><img src={LinkedIn} alt="Icon" /></a>
-              <a href="#"><img src={GitHub} alt="Icon" /></a>
-              <a href="#"><img src={Steam} alt="Icon" /></a>
+              <a href="https://www.linkedin.com/in/xinyi-dou/" target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt="Icon" /></a>
+              <a href="https://github.com/shaqiumeiying" target="_blank" rel="noopener noreferrer"><img src={GitHub} alt="Icon" /></a>
+              <a href="https://steamcommunity.com/profiles/76561198165851652/" target="_blank" rel="noopener noreferrer"><img src={Steam} alt="Icon" /></a>
             </div>
             <p>Copyright © 2024 <a href="https://github.com/yourusername">Xinyi Dou</a>. All rights reserved. </p>
 

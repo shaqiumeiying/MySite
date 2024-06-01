@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { ArrowRightCircleFill } from "react-bootstrap-icons";
 import { MeshDistortMaterial, Sphere, OrbitControls } from '@react-three/drei';
@@ -83,11 +83,10 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toDisplay = ["Coding", "Software Development", "3D Modelling", "UX/UI", "Video Editing", "Content Creating"];
   const period = 2000;
-  const wordDelay = 1000;
 
-  // Set color transition
+  const toDisplay = useMemo(() => ["Coding", "Software Development", "3D Modelling", "UX/UI", "Video Editing", "Content Creating"], []);
+
   const [color, setColor] = useState(new THREE.Color('#FFB3CD'));
 
   const updateColor = useCallback(() => {
@@ -101,15 +100,7 @@ export const Banner = () => {
     requestAnimationFrame(updateColor);
   }, [updateColor]);
 
-  useEffect(() => {
-    const ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => clearInterval(ticker);
-  }, [text, delta, isDeleting]);
-
-  const tick = () => {
+  const tick = useCallback(() => {
     const i = loopNum % toDisplay.length;
     const fullText = toDisplay[i];
     const updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
@@ -126,7 +117,15 @@ export const Banner = () => {
     } else {
       setDelta(prevDelta => isDeleting ? prevDelta / 1.6 : prevDelta);
     }
-  };
+  }, [isDeleting, loopNum, text, toDisplay]);
+
+  useEffect(() => {
+    const ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => clearInterval(ticker);
+  }, [tick, delta]);
 
   const handleButtonClick = () => {
     window.open(myCV, '_blank');

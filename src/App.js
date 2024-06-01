@@ -1,7 +1,6 @@
 import { NavBar } from './component/NavBar';
 import { Banner } from './component/Banner';
 import { Skills } from './component/Skills';
-import Test from './component/Test';
 import { Contact } from './component/Contact';
 import { Footer } from './component/Footer';
 import MyModel from './component/MyModel';

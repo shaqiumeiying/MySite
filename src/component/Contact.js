@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import cheader from '../assets/img/contact header.png';
@@ -96,7 +96,7 @@ export const Contact = () => {
                             <Row className="align-items-center">
                                 {formSubmitted ? (
                                     <Col md={12} className={formSubmitted ? "animate__animated animate__fadeIn" : ""}>
-                                        <img src={sent} alt="Email Sent Image" style={{ width: '200px', height: 'auto' }} />
+                                        <img src={sent} alt="" style={{ width: '200px', height: 'auto' }} />
                                         <br />
                                         <br />
                                         <br />

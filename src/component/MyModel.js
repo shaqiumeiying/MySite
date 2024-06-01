@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import styled from 'styled-components';
@@ -28,35 +28,29 @@ const InstructionText = styled.div`
 
 const MyModel = () => {
   const [loading, setLoading] = useState(true);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [initialPosition] = useState([0, 0, 10]);
   const canvasRef = useRef(null);
 
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
+  const handleResize = useCallback(() => {
     if (canvasRef.current && canvasRef.current.camera) {
-      canvasRef.current.camera.position.set(...initialPosition);
+      canvasRef.current.camera.position.set(...initialPosition); 
       canvasRef.current.camera.updateMatrixWorld();
     }
-  };
+  }, [initialPosition]);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
-    handleResize(); // Initial check
+    handleResize(); 
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [initialPosition]);
+  }, [handleResize]);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer); 
   }, []);
-
-  if (windowWidth <= 990) {
-    return null;
-  }
 
   return (
     <section id="model">
@@ -64,7 +58,7 @@ const MyModel = () => {
         <InstructionText>Drag to rotate, scroll to zoom</InstructionText>
         {loading && <LoadingText>Loading 3D Model...</LoadingText>}
         <Canvas
-          ref={canvasRef}
+          ref={canvasRef} 
           camera={{ position: initialPosition, fov: 30 }}
         >
           <Stage

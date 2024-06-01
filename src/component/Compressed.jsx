@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.2.17 compressed.gltf
 
 import { useGLTF } from '@react-three/drei'
 
-export  default function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/compressed.gltf')
   return (
     <group {...props} dispose={null}>

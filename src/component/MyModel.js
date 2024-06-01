@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import styled from 'styled-components';
-import Kid from './Compressed';
+import Kid from '../../public/Compressed';
 
 const Container = styled.div`
   height: 500px;

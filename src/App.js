@@ -3,7 +3,7 @@ import { Banner } from './component/Banner';
 import { Skills } from './component/Skills';
 import { Contact } from './component/Contact';
 import { Footer } from './component/Footer';
-// import MyModel from './component/MyModel'; 
+import MyModel from './component/MyModel'; 
 
 
 import './App.css';
@@ -18,7 +18,7 @@ function App() {
       <Banner />
       <br/><br/>
       <Skills />
-      {/* <MyModel /> */}
+      <MyModel />
       <br/><br/><br/>
       <Project />
       <br/><br/>

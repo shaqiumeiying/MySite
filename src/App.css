@@ -431,10 +431,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .contact-image {
-  width: 90%;
+  width: 70%;
   height: auto;
   display: block;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 50px;
 }
 
 .contact-container {
@@ -453,7 +453,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact {
   background: linear-gradient(60deg, #60C8A6 -10%, #C2517D 110%);
-  padding: 60px;
+  padding: 40px;
   border-radius: 60px;
   position: relative;
   z-index: 0;
@@ -472,6 +472,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   top: 5px;
   left: 5px;
+  pointer-events: none;
 }
 
 .contact img {

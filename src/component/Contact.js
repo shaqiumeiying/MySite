@@ -128,7 +128,7 @@ export const Contact = () => {
                                                         <input type="tel" placeholder="Tel" value={details.phone} onChange={(e) => onFormUpdate('phone', e.target.value)} />
                                                     </Col>
                                                     <Col sm={12} className="px-1">
-                                                        <textarea rows="6" placeholder="Message" value={details.message} onChange={(e) => onFormUpdate('message', e.target.value)} />
+                                                        <textarea rows="2" placeholder="Message" value={details.message} onChange={(e) => onFormUpdate('message', e.target.value)} />
                                                     </Col>
                                                     <Col>
                                                         <button type="submit" style={{ alignItems: 'center' }}><span>{buttonText}</span></button>

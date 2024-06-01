@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../assets/img/logo.png';
 import LinkedIn from '../assets/img/linkedin.png';
-import Steam from '../assets/img/steam.png';
+import UpWork from '../assets/img/upwork.png';
 import GitHub from '../assets/img/github.png';
 
 export const NavBar = () => {
@@ -72,7 +72,7 @@ export const NavBar = () => {
                         <div className="social-icon">
                             <a href="https://www.linkedin.com/in/xinyi-dou/" target="_blank" rel="noopener noreferrer"><img src={LinkedIn} alt="LinkedIn" /></a>
                             <a href="https://github.com/shaqiumeiying" target="_blank" rel="noopener noreferrer"><img src={GitHub} alt="GitHub" /></a>
-                            <a href="https://steamcommunity.com/profiles/76561198165851652/" target="_blank" rel="noopener noreferrer"><img src={Steam} alt="Steam Profile" /></a>
+                            <a href="https://www.upwork.com/freelancers/~01c0625ef2f9eb2bb5" target="_blank" rel="noopener noreferrer"><img src={UpWork} alt="Upwork Profile" /></a>
                         </div>
                         <button className="vvd" onClick={scrollToContact}>Contact Me!</button>
                     </span>

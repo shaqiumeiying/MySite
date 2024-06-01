@@ -6,12 +6,8 @@ import csent from '../assets/img/contact sent.png';
 import envelope from '../assets/img/envolope.gif';
 import sent from '../assets/img/sent.png';
 import bling from '../assets/bling.mp3';
-import TrackVisibility from 'react-on-screen';
-import emailjs from 'emailjs-com';
 
-// user id:QwTz8yuzrU6f7pJTA
-// template id: template_43oreur
-// service id: service_brauvm5
+import TrackVisibility from 'react-on-screen';
 
 const formInitialDetails = {
     firstName: "",
@@ -26,13 +22,13 @@ export const Contact = () => {
     const [buttonText, setButtonText] = useState("Send");
     const [status, setStatus] = useState({});
     const [formSubmitted, setFormSubmitted] = useState(false);
-    const [soundPlayed, setSoundPlayed] = useState(false);
+    const [soundPlayed, setSoundPlayed] = useState(false); // State to track if sound has been played
 
     useEffect(() => {
-        if (formSubmitted && !soundPlayed) { 
+        if (formSubmitted && !soundPlayed) { // Play sound only if form is submitted and sound hasn't been played yet
             const audio = new Audio(bling);
             audio.play();
-            setSoundPlayed(true);
+            setSoundPlayed(true); // Update state to indicate that sound has been played
         }
     }, [formSubmitted, soundPlayed]);
 
@@ -56,20 +52,16 @@ export const Contact = () => {
 
         setButtonText("Sending...");
         try {
-            const result = await emailjs.send(
-                'service_brauvm5', 
-                'template_43oreur', 
-                {
-                    from_name: details.firstName + " " + details.lastName,
-                    to_name: "Diana",
-                    from_email: details.email,
-                    to_email: "shaqiumeiying@gmail.com",
-                    phone: details.phone,
-                    message: details.message,
-                }, 
-                'QwTz8yuzrU6f7pJTA'); 
-
-            if (result.status === 200) {
+            const response = await fetch(("/api/contact"), {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json;charset=utf-8"
+                },
+                body: JSON.stringify(details)
+            });
+            
+            const result = await response.json();
+            if (result.code === 200) {
                 setStatus({
                     success: true,
                     message: "Email Sent Successfully"
@@ -157,3 +149,5 @@ export const Contact = () => {
         </TrackVisibility>
     );
 };
+
+

@@ -1,17 +1,20 @@
 require('dotenv').config();
 const express = require("express");
+const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use("/", router);
+app.listen(5000, () => console.log("Server Running"));
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: "shaqiumeiying@gmail.com",
-    pass: "pigz hqml pnve bkct",
+    pass: "pigz hqml pnve bkct"
   },
 });
 
@@ -23,7 +26,7 @@ contactEmail.verify((error) => {
   }
 });
 
-app.post("/api/contact", (req, res) => {
+router.post("/contact", (req, res) => {
   const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
@@ -45,5 +48,3 @@ app.post("/api/contact", (req, res) => {
     }
   });
 });
-
-module.exports = app;

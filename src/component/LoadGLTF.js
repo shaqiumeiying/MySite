@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Environment, OrbitControls} from '@react-three/drei';
-import Compressed from './Compressed';
+import Compressedemb from './Compressed-emb';
 import styled from 'styled-components';
 
 const Container = styled.div`

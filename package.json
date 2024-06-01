@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@babel/plugin-transform-private-property-in-object": "^7.24.6",
+    "@babel/plugin-transform-private-methods": "^7.24.6",
+    "@jridgewell/sourcemap-codec": "^1.4.15",
     "@mediapipe/tasks-vision": "^0.10.12",
     "@react-three/drei": "^9.105.3",
     "@react-three/fiber": "^8.16.1",
@@ -59,8 +60,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "concurrently": "^8.2.2",
-    "react-app-rewired": "^2.2.1"
+    "concurrently": "^8.2.2"
   }
 }

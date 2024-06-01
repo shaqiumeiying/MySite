@@ -1,5 +1,5 @@
 
-# ![MySite](https://github.com/shaqiumeiying/MySite/blob/main/my-site/src/assets/readme/image.png)
+# ![MySite](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image.png)
 # Welcome to my Protfolio✨
 <table>
 <tr>
@@ -19,27 +19,27 @@ This is my personal portfolio website, a showcase of my capabilities and ongoing
 ### Home
 The home page of my site. `LinkedIn`, `Github` and `Steam` link in the Navigation bar, and below is a link to my resume.
 
-# ![Home](https://github.com/shaqiumeiying/MySite/blob/main/my-site/src/assets/readme/image.png)
+# ![Home](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image.png)
 
 ### Skills
 A Carousel/Slider showcasing my technical skills and tools i'm familiar with.
-# ![Skills](https://github.com/shaqiumeiying/MySite/blob/main/my-site/src/assets/readme/image-1.png)
+# ![Skills](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image-1.png)
 
 ### 3D Model Showcase
 Interactable 3d model, they are also the models for the banner and the theme of this website 🍓🍇
 
-# ![3D Model](https://github.com/shaqiumeiying/MySite/blob/main/my-site/src/assets/readme/image-6.png)
+# ![3D Model](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image-6.png)
 
 ### Projects
 Project showcases with demo link and code sources. Some are still in progress.
 
- ![Code](https://github.com/shaqiumeiying/MySite/blob/main/my-site/src/assets/readme/image-2.png)
- ![Design](https://github.com/shaqiumeiying/MySite/blob/main/my-site/src/assets/readme/image-3.png)
-# ![Create](https://github.com/shaqiumeiying/MySite/blob/main/my-site/src/assets/readme/image-4.png)
+ ![Code](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image-2.png)
+ ![Design](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image-3.png)
+# ![Create](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image-4.png)
 
 
 ### Contact Form
-![Contact Form](https://github.com/shaqiumeiying/MySite/blob/main/my-site/src/assets/readme/image-8.png)
+![Contact Form](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image-8.png)
 
 Cute 3D animation with image transitions and sound effects upon sending the message. Your request will be sent to my mailbox, and I typically respond within 2-3 days.
 
@@ -49,7 +49,7 @@ Cute 3D animation with image transitions and sound effects upon sending the mess
 The Website is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
 
 <div style="text-align: center;">
-<img src="https://github.com/shaqiumeiying/MySite/blob/main/my-site/src/assets/readme/image-5.png" alt="Mobile Support" style="width: 300px;">
+<img src="https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image-5.png" alt="Mobile Support" style="width: 300px;">
 </div>
 
 ## Built with 

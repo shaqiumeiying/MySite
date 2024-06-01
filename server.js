@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
@@ -10,8 +9,8 @@ app.use(express.json());
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USERNAME, // Use environment variables
-    pass: process.env.EMAIL_PASSWORD
+    user: "shaqiumeiying@gmail.com",
+    pass: "pqew nphl cntj adji",
   },
 });
 

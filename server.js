@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
@@ -9,8 +10,8 @@ app.use(express.json());
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: "shaqiumeiying@gmail.com",
+    pass: "pigz hqml pnve bkct",
   },
 });
 
@@ -29,7 +30,7 @@ app.post("/api/contact", (req, res) => {
   const phone = req.body.phone;
   const mail = {
     from: name,
-    to: process.env.EMAIL_USER,
+    to: "shaqiumeiying@gmail.com",
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>

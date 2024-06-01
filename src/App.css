@@ -472,6 +472,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   top: 5px;
   left: 5px;
+  pointer-events: none;
 }
 
 .contact img {

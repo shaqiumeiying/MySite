@@ -4,8 +4,6 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const PORT = process.env.PORT || 5000; // Use dynamic port provided by Vercel or default to 5000
-
 app.use(cors());
 app.use(express.json());
 
@@ -25,7 +23,7 @@ contactEmail.verify((error) => {
   }
 });
 
-app.post("/contact", async (req, res) => { // Use async to allow await inside the function
+app.post("/api/contact", async (req, res) => { // Use async to allow await inside the function
   const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
@@ -41,7 +39,7 @@ app.post("/contact", async (req, res) => { // Use async to allow await inside th
   };
   
   try {
-    await contactEmail.sendMail(mail); // Use await to ensure the email sending process completes before continuing
+    await contactEmail.sendMail(mail);
     res.json({ code: 200, status: "Message Sent" });
   } catch (error) {
     console.error("Error sending email:", error);
@@ -49,6 +47,7 @@ app.post("/contact", async (req, res) => { // Use async to allow await inside th
   }
 });
 
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

@@ -1,20 +1,21 @@
 require('dotenv').config();
 const express = require("express");
-const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "shaqiumeiying@gmail.com",
-    pass: "jpsh gpyr yszk ztxn"
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS,
   },
 });
 
@@ -26,14 +27,14 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact", (req, res) => {
+app.post("/contact", (req, res) => {
   const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
   const mail = {
     from: name,
-    to: "shaqiumeiying@gmail.com",
+    to: process.env.GMAIL_USER,
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>

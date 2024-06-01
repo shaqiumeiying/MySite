@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/plugin-transform-private-methods": "^7.24.6",
     "@jridgewell/sourcemap-codec": "^1.4.15",
     "@mediapipe/tasks-vision": "^0.10.12",

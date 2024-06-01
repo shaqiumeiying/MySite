@@ -1,7 +1,7 @@
 {
     "build": {
       "env": {
-        "GENERATE_SOURCEMAP": false,
+        "GENERATE_SOURCEMAP": "false",
         "EMAIL_USERNAME": "shaqiumeiying@gmail.com",
         "EMAIL_PASSWORD": "pqew nphl cntj adji"
       }

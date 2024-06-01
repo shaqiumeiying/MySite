@@ -18,7 +18,7 @@ function App() {
       <Banner />
       <br/><br/>
       <Skills />
-      <MyModel />
+      {/* <MyModel /> */}
       <br/><br/><br/>
       <Project />
       <br/><br/>

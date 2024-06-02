@@ -16,18 +16,20 @@ function App() {
   return (
     <Container className="App">
       <NavBar />
-
       <div className="layer">
       <Banner />
       <StarsCanvas />
       </div>
-
       <Skills />
       <LoadGLTF />
       <Project />
       <br/><br/>
+      
+      <div className="layer">
       <Contact />
       <Footer />
+      <StarsCanvas />
+      </div>
     </Container>
   );
 }

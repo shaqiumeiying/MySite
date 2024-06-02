@@ -68,8 +68,6 @@ const LoadGLTF = () => {
           autoRotate={true}
           autoRotateSpeed={0.15}
           enableZoom={true}
-          maxDistance={7}
-          minDistance={3}
         />
         <Suspense fallback={null}>
           <Stage

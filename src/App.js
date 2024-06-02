@@ -27,6 +27,7 @@ function App() {
       
       <div className="layer">
       <Contact />
+      <br/>
       <Footer />
       <StarsCanvas />
       </div>

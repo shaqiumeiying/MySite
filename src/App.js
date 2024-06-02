@@ -1,6 +1,7 @@
 import { NavBar } from './component/NavBar';
 import { Banner } from './component/Banner';
 import { Skills } from './component/Skills';
+import { Project } from './component/Project';
 import { Contact } from './component/Contact';
 import { Footer } from './component/Footer';
 import StarsCanvas from './component/StarCanvas';
@@ -10,7 +11,7 @@ import LoadGLTF from './component/LoadGLTF';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
-import { Project } from './component/Project';
+
 
 function App() {
   return (

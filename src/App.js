@@ -3,7 +3,7 @@ import { Banner } from './component/Banner';
 import { Skills } from './component/Skills';
 import { Contact } from './component/Contact';
 import { Footer } from './component/Footer';
-import StarsCanvas from './component/Stars';
+import StarsCanvas from './component/StarCanvas';
 import LoadGLTF from './component/LoadGLTF';
 
 

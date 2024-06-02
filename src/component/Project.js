@@ -90,7 +90,7 @@ export const Project = () => {
               <Row>
                 <Col style={{ paddingLeft: '20px', paddingRight: '20px' }}>
                   <h3>Projects</h3>
-                  <p>"Engaging in diverse projects is vital for skill development, offering opportunities to tackle various challenges and refine expertise."</p>
+                  <p>"Engaging in diverse projects involves tackling various challenges and refining expertise."</p>
                   <Tab.Container id="projects-tabs" activeKey={activeKey} onSelect={(key) => setActiveKey(key)}>
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>

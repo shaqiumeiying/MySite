@@ -53,39 +53,51 @@ const productivityTools = [
     { img: ac, name: 'AutoCAD' }
 ];
 
-const SkillCarousel = ({ title, items }) => (
-    <TrackVisibility partialVisibility once>
+const SkillCarousel = ({ title, items }) => {
+    let quote;
+    
+    // Determine which quote to display based on the title
+    if (title === "Technical Skills") {
+      quote = '"Technical skills are the tools of the modern mind."';
+    } else if (title === "Productivity Tools") {
+      quote = '"Productivity is doing more with less."';
+    }
+  
+    return (
+      <TrackVisibility partialVisibility once>
         {({ isVisible }) => (
-            <div className={`skill-bx ${isVisible ? "animate__animated animate__fadeInUp" : "hidden"}`}>
-                <h3>{title}</h3>
-                <p>"Find some quotes about skills"</p>
-                <Carousel responsive={responsive} infinite={true} className="skill-slider">
-                    {items.map((item, index) => (
-                        <div className="skill-card" key={index}>
-                            <img src={item.img} alt={item.name} />
-                            <h4>{item.name}</h4>
-                        </div>
-                    ))}
-                </Carousel>
-            </div>
+          <div className={`skill-bx ${isVisible ? "animate__animated animate__fadeInUp" : "hidden"}`}>
+            <h3>{title}</h3>
+            <p>{quote}</p>
+            <Carousel responsive={responsive} infinite={true} className="skill-slider">
+              {items.map((item, index) => (
+                <div className="skill-card" key={index}>
+                  <img src={item.img} alt={item.name} />
+                  <h4>{item.name}</h4>
+                </div>
+              ))}
+            </Carousel>
+          </div>
         )}
-    </TrackVisibility>
-);
-
-export const Skills = () => (
+      </TrackVisibility>
+    );
+  };
+  
+  export const Skills = () => (
     <section className="skill" id="skills">
-        <Container>
-            <Row>
-                <Col>
-                    <SkillCarousel title="Technical Skill Sets" items={skillSets} />
-                </Col>
-            </Row>
-            <br /><br /><br /><br />
-            <Row>
-                <Col>
-                    <SkillCarousel title="Productivity Tools" items={productivityTools} />
-                </Col>
-            </Row>
-        </Container>
+      <Container>
+        <Row>
+          <Col>
+            <SkillCarousel title="Technical Skills" items={skillSets} />
+          </Col>
+        </Row>
+        <br /><br /><br /><br />
+        <Row>
+          <Col>
+            <SkillCarousel title="Productivity Tools" items={productivityTools} />
+          </Col>
+        </Row>
+      </Container>
     </section>
-);
+  );
+  

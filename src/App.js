@@ -3,7 +3,7 @@ import { Banner } from './component/Banner';
 import { Skills } from './component/Skills';
 import { Contact } from './component/Contact';
 import { Footer } from './component/Footer';
-// import MyModel from './component/MyModel'; 
+import StarsCanvas from './component/Stars';
 import LoadGLTF from './component/LoadGLTF';
 
 
@@ -16,7 +16,12 @@ function App() {
   return (
     <Container className="App">
       <NavBar />
+
+      <div className="layer">
       <Banner />
+      <StarsCanvas />
+      </div>
+
       <Skills />
       <LoadGLTF />
       <Project />

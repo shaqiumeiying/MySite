@@ -1,11 +1,14 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, Suspense, lazy } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { ArrowRightCircleFill } from "react-bootstrap-icons";
-import { MeshDistortMaterial, Sphere, OrbitControls } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
 import myCV from '../assets/cv.pdf';
-import ochero from '../assets/img/hero oc.png';
+import ochero from '../assets/img/hero_oc1.png';
+
+const Canvas = lazy(() => import('@react-three/fiber').then(module => ({ default: module.Canvas })));
+const OrbitControls = lazy(() => import('@react-three/drei').then(module => ({ default: module.OrbitControls })));
+const Sphere = lazy(() => import('@react-three/drei').then(module => ({ default: module.Sphere })));
+const MeshDistortMaterial = lazy(() => import('@react-three/drei').then(module => ({ default: module.MeshDistortMaterial })));
 
 const fadeInUp = keyframes`
   from {
@@ -78,7 +81,7 @@ const Img = styled.img`
   }
 `;
 
-export const Banner = () => {
+export const Banner = React.memo(() => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
@@ -146,18 +149,20 @@ export const Banner = () => {
             <button onClick={handleButtonClick}>My Resume<ArrowRightCircleFill size={25} /></button>
           </Left>
           <Right>
-            <Canvas camera={{ fov: 45, position: [3, 3, 3] }}>
-              <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={2} />
-              <ambientLight intensity={1} />
-              <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={1.35}>
-                <MeshDistortMaterial color={color} attach="material" distort={.5} speed={1.3} />
-              </Sphere>
-            </Canvas>
-            <Img src={ochero} alt="hero" />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Canvas camera={{ fov: 45, position: [3, 3, 3] }}>
+                <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={2} />
+                <ambientLight intensity={1} />
+                <directionalLight position={[3, 2, 1]} />
+                <Sphere args={[1, 32, 32]} scale={1.35}>
+                  <MeshDistortMaterial color={color} attach="material" distort={.5} speed={1.3} />
+                </Sphere>
+              </Canvas>
+            </Suspense>
+            <Img src={ochero} alt="hero" loading="lazy" />
           </Right>
         </Container>
       </div>
     </section>
   );
-};
+});

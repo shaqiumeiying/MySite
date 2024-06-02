@@ -1,8 +1,9 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState, lazy } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, PerspectiveCamera } from '@react-three/drei';
-import Compressedemb from './Compressed-emb';
 import styled from 'styled-components';
+
+const Compressedemb = lazy(() => import('./Compressed-emb'));
 
 const Container = styled.div`
   height: 500px;
@@ -38,6 +39,7 @@ const PaddingContainer = styled.div`
 const LoadGLTF = () => {
   const [loading, setLoading] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [modelPosition, setModelPosition] = useState([0, 0, 0]);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -50,12 +52,21 @@ const LoadGLTF = () => {
     return () => clearTimeout(timer);
   }, []);
 
+
+  const handleScroll = () => {
+  };
+
+
+  const updateModelPosition = (position) => {
+    setModelPosition(position);
+  };
+
   if (windowWidth < 990) {
     return <PaddingContainer />;
   }
 
   return (
-    <Container>
+    <Container onScroll={handleScroll}>
       <InstructionText>Drag to rotate, scroll to zoom</InstructionText>
       {loading && <LoadingText>Loading 3D Model...</LoadingText>}
       <Canvas>
@@ -65,16 +76,16 @@ const LoadGLTF = () => {
           position={[0, 2, 13]}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          autoRotate={true}
-          autoRotateSpeed={0.15}
           enableZoom={true}
+
+          onUpdate={(state) => updateModelPosition(state.target.toArray())}
         />
         <Suspense fallback={null}>
           <Stage
             environment="sunset"
             intensity={0.7}
             scale={[1, 1, 1]}
-            position={[0, 0, 0]}
+            position={modelPosition}
           >
             <Compressedemb onLoaded={() => setLoading(false)} />
           </Stage>

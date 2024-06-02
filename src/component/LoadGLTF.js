@@ -1,13 +1,12 @@
-import { Suspense, useEffect, useState, lazy } from 'react';
+import { useEffect, useState, Suspense, lazy } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, PerspectiveCamera } from '@react-three/drei';
 import styled from 'styled-components';
 
 const DesktopModel = lazy(() => import('./Compressed-emb'));
-const MobileModel = lazy(() => import('./Starsemb'));
+const MobileModel = lazy(() => import('./Heartnstar'));
 
 const Container = styled.div`
-  height: 500px;
   width: 100%;
   position: relative;
 `;
@@ -23,7 +22,7 @@ const LoadingText = styled.div`
 
 const InstructionText = styled.div`
   position: absolute;
-  top: 10px;  // Adjust as needed
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -34,7 +33,16 @@ const InstructionText = styled.div`
 
 const LoadGLTF = () => {
   const [loading, setLoading] = useState(true);
+  //eslint-disable-next-line
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [modelPosition, setModelPosition] = useState([0, 0, 0]);
+  const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
@@ -45,26 +53,26 @@ const LoadGLTF = () => {
     setModelPosition(position);
   };
 
-  const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
-
   return (
-    <Container>
+    <Container style={{ height: isMobileDevice ? 300 : 500 }}>
       {!isMobileDevice && <InstructionText>Drag to rotate, pinch/scroll to zoom</InstructionText>}
       {loading && <LoadingText>Loading 3D Model...</LoadingText>}
-      <Canvas>
+      <Canvas style={{ height: isMobileDevice ? 300 : 500 }}>
         <ambientLight intensity={0.4} />
         <PerspectiveCamera makeDefault fov={75} position={[0, 2, 13]} />
         <OrbitControls
           autoRotate={isMobileDevice}
+          autoRotateSpeed={1.2}
           position={[0, 2, 13]}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          enableZoom={isMobileDevice}
+          enableZoom={!isMobileDevice}
+          enableRotate={!isMobileDevice}
           onUpdate={(state) => updateModelPosition(state.target.toArray())}
         />
         <Suspense fallback={null}>
           {isMobileDevice ? (
-            <Stage environment="park" intensity={1} scale={[1, 1, 1]} position={modelPosition} shadows={false}>
+            <Stage environment="lobby" intensity={.7} scale={[1, 1, 1]} position={modelPosition} shadows={false}>
               <MobileModel onLoaded={() => setLoading(false)} />
             </Stage>
           ) : (

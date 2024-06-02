@@ -18,7 +18,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.006}
+          size={0.008}
           sizeAttenuation={true}
           depthWrite={false}
         />

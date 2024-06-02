@@ -2,7 +2,6 @@ import { Suspense, useEffect, useState, lazy } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, PerspectiveCamera } from '@react-three/drei';
 import styled from 'styled-components';
-import StarsCanvas from './StarCanvas';
 
 const DesktopModel = lazy(() => import('./Compressed-emb'));
 const MobileModel = lazy(() => import('./Starsemb'));
@@ -60,7 +59,7 @@ const LoadGLTF = () => {
           position={[0, 2, 13]}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          enableZoom={true}
+          enableZoom={isMobileDevice}
           onUpdate={(state) => updateModelPosition(state.target.toArray())}
         />
         <Suspense fallback={null}>

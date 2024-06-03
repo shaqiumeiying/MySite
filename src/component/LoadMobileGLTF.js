@@ -28,7 +28,7 @@ const LoadMobileGLTF = () => {
           enableRotate={false}
           enableDamping={false}
         />
-        <Environment preset="forest" />
+        <Environment preset="dawn" />
         <Suspense fallback={null}>
           <MobileModel scale={[1.7, 1.7, 1.7]} />
         </Suspense>

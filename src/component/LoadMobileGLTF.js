@@ -25,8 +25,10 @@ const LoadMobileGLTF = () => {
           autoRotate
           autoRotateSpeed={1.2}
           enableZoom={false}
-          enableRotate={false}
+          enableRotate={true}
           enableDamping={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
         />
         <Environment preset="dawn" />
         <Suspense fallback={null}>

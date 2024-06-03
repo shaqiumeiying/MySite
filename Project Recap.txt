@@ -1,0 +1,24 @@
+Summary:
+
+1. Embed 3d model to web using three drei
+
+2. convert glb/gltf to jsx through npx gltfjsx
+
+3. if export blender in seperate gltf file, resize textures, then import back to Blender then export as embedded gltf, size will dramatically decrease. 
+(with builtin compression, will have even bgetter optimization result)
+
+4. 3d animation, pose, key frames (ctrl + i)
+
+
+
+
+Next step todos/challenges:
+
+1. webgl/opengl toon shader
+
+2. better website optimization
+
+3. more projects
+
+4. maybe add a "work" section
+

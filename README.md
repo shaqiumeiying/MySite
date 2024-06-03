@@ -11,7 +11,7 @@ This is my personal portfolio website, a showcase of my capabilities and ongoing
 
 
 ## Link
-https://xinyidou.netlify.app/ 
+https://xinyidou.fyi/
 
 ## The Site
 

@@ -1,9 +1,10 @@
 import { useEffect, useState, Suspense, lazy } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Stage } from '@react-three/drei';
+import { OrbitControls,  Environment } from '@react-three/drei';
 import styled from 'styled-components';
 
-const DesktopModel = lazy(() => import('./Compressed-emb'));
+
+const DesktopModel = lazy(() => import('./Comp'));
 
 const Container = styled.div`
   width: 100%;
@@ -45,17 +46,19 @@ const LoadPCGLTF = () => {
       <Canvas style={{ height: 500 }}>
         <ambientLight intensity={0.4} />
         <OrbitControls
-          autoRotate={false}
+          autoRotate={true}
+          autoRotateSpeed={0.4}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
           enableZoom
-          enableRotate
-          enableDamping
+          minDistance={3}
+          maxDistance={8}
+          
         />
         <Suspense fallback={null}>
-          <Stage environment="sunset" intensity={1} scale={[1, 1, 1]} position={[0, 0, 0]}>
-            <DesktopModel onLoaded={() => setLoading(false)} />
-          </Stage>
+        <Environment preset="sunset" />
+            <DesktopModel onLoaded={() => setLoading(false)} scale={[1,1,1]} position={[0,-3,0]}/>
+     
         </Suspense>
       </Canvas>
     </Container>

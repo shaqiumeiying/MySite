@@ -6,7 +6,8 @@ import { Contact } from './component/Contact';
 import { Footer } from './component/Footer';
 import StarsCanvas from './component/StarCanvas';
 import StarsCanvasM from './component/StarCanvas mobile';
-import LoadGLTF from './component/LoadGLTF';
+import LoadPCGLTF from './component/LoadPCGLTF';
+import LoadMobileGLTF from './component/LoadMobileGLTF';
 
 
 import './App.css';
@@ -38,10 +39,10 @@ function App() {
       <Skills />
       {isMobileDevice ? (
         <div className="layer">
-          <LoadGLTF />
+          <LoadMobileGLTF />
           <StarsCanvasM />
         </div>
-      ) : (<LoadGLTF />)}
+      ) : (<LoadPCGLTF />)}
       <Project />
       <br/><br/>
       <div className="layer">

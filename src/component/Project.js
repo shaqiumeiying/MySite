@@ -11,6 +11,7 @@ import ice from '../assets/img/ice.png';
 import ubcvideo from '../assets/img/ubc video.png';
 import p from '../assets/img/placeholder.png';
 import myoc from '../assets/img/myoc.png';
+import flappyd from '../assets/img/FlappyD thumbnail.png';
 
 export const Project = () => {
   const projects = [
@@ -66,10 +67,10 @@ export const Project = () => {
       demo: "https://www.youtube.com/watch?v=uTztjAcvb94"
     },
     {
-      title: "Work In Progress...",
-      description: "Wanna see more? Stay tuned!",
-      img: p,
-      demo: ""
+      title: "FlappyDiane",
+      description: "A flappy bird inspired game created with Unity, aseprite and C#.",
+      img: flappyd,
+      demo: "https://xinyidou.itch.io/flappydiane"
     },
     {
       title: "Work In Progress...",

@@ -1,4 +1,5 @@
 import { Col, Button } from "react-bootstrap";
+import Tilt from "react-parallax-tilt";
 
 export const CreationCard = ({ title, description, img, demo }) => {
   
@@ -8,6 +9,7 @@ export const CreationCard = ({ title, description, img, demo }) => {
 
   return (
     <Col size={12} sm={6} md={4}>
+      <Tilt>
       <div className="proj-imgbx">
         <img src={img} alt="" />
         <div className="proj-txtx">
@@ -20,6 +22,7 @@ export const CreationCard = ({ title, description, img, demo }) => {
           </Button>
         </div>
       </div>
+      </Tilt>
     </Col>
   );
 };

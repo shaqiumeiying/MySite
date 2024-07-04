@@ -47,9 +47,9 @@ export const Project = () => {
     },
     {
       title: "Original Character Design",
-      description: "Character design inspired by my favourite fruits and colors *🍓🍇* Created using Blender.",
+      description: "Character design inspired by my favourite fruits and colors *🍓🍇* Created using Blender. They are NEON and NOEN.",
       img: myoc,
-      demo: ""
+      demo: "https://www.youtube.com/watch?v=_yBl7i3xrz0"
     },
     {
       title: "Work In Progress...",
@@ -68,7 +68,7 @@ export const Project = () => {
     },
     {
       title: "FlappyDiane",
-      description: "A flappy bird inspired game created with Unity, aseprite and C#.",
+      description: "A flappy bird inspired game created with Unity, Aseprite, FamiStudio and C#.",
       img: flappyd,
       demo: "https://xinyidou.itch.io/flappydiane"
     },

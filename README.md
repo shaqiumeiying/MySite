@@ -62,6 +62,9 @@ The Website is compatible with devices of all sizes and all OS's, and consistent
 - **Photoshop**: Utilized for graphic design and image editing.
 - **Premiere**: Leveraged for 3D animation export.
 
+## Local Setups
+- npm install
+- npm start
 
 ## To-do
 - Add more projects and refine the visual design.

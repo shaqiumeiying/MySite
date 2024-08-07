@@ -30,11 +30,11 @@ export const Project = () => {
       code: "https://github.com/shaqiumeiying/Underwater-Scene---Javascript-Animation"
     },
     {
-      title: "Todo List",
-      description: "A simple to-do list web application that allows users to add, delete, and cross out tasks.",
+      title: "Simple Todo-list",
+      description: "A simple to-do list web application that allows users to add, delete, and cross out tasks. Tasks will be presistent even if the window is closed and reopened.",
       img: todo,
-      demo: "https://shaqiumeiying.github.io/todo-list/",
-      code: "https://github.com/shaqiumeiying/todo-list"
+      demo: "https://shaqiumeiying.github.io/Simple-Todo-list/",
+      code: "https://github.com/shaqiumeiying/Simple-Todo-list"
     }
   ];
 

@@ -19,7 +19,7 @@ export const CreationCard = ({ title, description, img, demo, code }) => {
     <Col size={12} sm={6} md={4}>
       <Tilt>
         <div className="proj-imgbx">
-          <img src={img} alt={`${title} image`} />
+          <img src={img} alt="" />
           <div className="proj-txtx">
             <h4>{title}</h4>
             <span>{description}</span>

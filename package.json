@@ -27,6 +27,7 @@
     "react-on-screen": "^2.1.1",
     "react-parallax-tilt": "^1.7.227",
     "react-scripts": "^5.0.1",
+    "react-tilt": "^1.0.2",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^6.1.8",
     "three": "^0.163.0",

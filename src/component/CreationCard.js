@@ -1,5 +1,5 @@
-import { Button, Col } from 'react-bootstrap';  // Assuming you are using react-bootstrap for Button and Col
-import Tilt from 'react-tilt';  // Assuming you are using react-tilt for Tilt effect
+import { Col, Button } from "react-bootstrap";
+import Tilt from "react-parallax-tilt";
 
 export const CreationCard = ({ title, description, img, demo, code }) => {
   
@@ -19,7 +19,7 @@ export const CreationCard = ({ title, description, img, demo, code }) => {
     <Col size={12} sm={6} md={4}>
       <Tilt>
         <div className="proj-imgbx">
-          <img src={img} alt='' />
+          <img src={img} alt={`${title} image`} />
           <div className="proj-txtx">
             <h4>{title}</h4>
             <span>{description}</span>
@@ -30,7 +30,7 @@ export const CreationCard = ({ title, description, img, demo, code }) => {
                 Demo
               </Button>
             )}
-            {title === "FlappyDiane" && code && (
+            {code && (
               <Button onClick={handleCode} variant="dark">
                 Code
               </Button>

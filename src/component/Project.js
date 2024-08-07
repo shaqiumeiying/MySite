@@ -70,7 +70,8 @@ export const Project = () => {
       title: "FlappyDiane",
       description: "A flappy bird inspired game created with Unity, Aseprite, FamiStudio and C#.",
       img: flappyd,
-      demo: "https://xinyidou.itch.io/flappydiane"
+      demo: "https://xinyidou.itch.io/flappydiane",
+      code: "https://github.com/shaqiumeiying/My-Flappy-Game"
     },
     {
       title: "Work In Progress...",

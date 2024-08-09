@@ -40,8 +40,8 @@ export const Project = () => {
 
   const designs = [
     {
-      title: "Immersive 3D Scene",
-      description: "A 3D demo scene built with Unity and self-modeled assets, available for 360 demo viewing",
+      title: "Immersive VR Scene",
+      description: "A VR demo scene built with Unity and self-modeled assets, available for 360 demo viewing",
       img: ice,
       demo: "https://momento360.com/e/uc/a42ab28b80eb40848147cb1cf8489edf?utm_campaign=embed&utm_source=other&size=medium&display-plan=true&upload-key=6d54db05d3d14cee8aeac8e92bab136d"
     },

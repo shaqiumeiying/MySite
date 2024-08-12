@@ -27,7 +27,7 @@ export const CreationCard = ({ title, description, img, demo, code }) => {
             <br />
             {demo && (
               <Button onClick={handleDemo} variant="dark" style={{ marginRight: '10px' }}>
-                Demo
+                Details
               </Button>
             )}
             {code && (

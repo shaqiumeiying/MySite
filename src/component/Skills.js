@@ -37,20 +37,21 @@ const responsive = {
 };
 
 const skillSets = [
-    { img: cp, name: 'C, C++, C#' },
-    { img: js, name: 'JavaScript' },
-    { img: python, name: 'Python' },
-    { img: css, name: 'CSS' },
-    { img: sql, name: 'SQL' },
-    { img: R, name: 'R' }
+  { img: js, name: 'JavaScript' },
+  { img: cp, name: 'C, C++, C#' },
+  { img: python, name: 'Python' },
+  { img: css, name: 'CSS' },
+  { img: sql, name: 'SQL' },
+  { img: R, name: 'R' }
 ];
 
 const productivityTools = [
-    { img: unity, name: 'Unity' },
-    { img: adb, name: 'Adobe Franchise' },
-    { img: figma, name: 'Figma' },
-    { img: blender, name: 'Blender' },
-    { img: ac, name: 'AutoCAD' }
+  { img: unity, name: 'Unity' },
+  { img: adb, name: 'Adobe Franchise' },
+  { img: figma, name: 'Figma' },
+  { img: blender, name: 'Blender' },
+  { img: ac, name: 'AutoCAD' },
+ 
 ];
 
 const SkillCarousel = ({ title, items }) => {
@@ -58,9 +59,9 @@ const SkillCarousel = ({ title, items }) => {
     
     // Determine which quote to display based on the title
     if (title === "Technical Skills") {
-      quote = '"Technical skills are the tools of the modern mind."';
+      quote = 'I use technology to bring my designs to life :)';
     } else if (title === "Productivity Tools") {
-      quote = '"Productivity is doing more with less."';
+      quote = 'I create wonderful designs with them :)';
     }
   
     return (

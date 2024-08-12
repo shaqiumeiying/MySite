@@ -4,6 +4,7 @@ import { ProjCard } from './ProjCard';
 import { CreationCard } from './CreationCard.js';
 import TrackVisibility from 'react-on-screen';
 
+
 import uw from '../assets/img/uw.png';
 import insight from '../assets/img/insight ubc.png';
 import todo from '../assets/img/todolist.png';
@@ -12,6 +13,8 @@ import ubcvideo from '../assets/img/ubc video.png';
 import p from '../assets/img/placeholder.png';
 import myoc from '../assets/img/myoc.png';
 import flappyd from '../assets/img/FlappyD thumbnail.png';
+import animation from '../assets/img/animation.png'
+import momi from '../assets/img/momi.png'
 
 export const Project = () => {
   const projects = [
@@ -35,6 +38,13 @@ export const Project = () => {
       img: todo,
       demo: "https://shaqiumeiying.github.io/Simple-Todo-list/",
       code: "https://github.com/shaqiumeiying/Simple-Todo-list"
+    },
+    {
+      title: "Work In Progress",
+      description: "Wanna know more? Stay tuned!",
+      img: p,
+      demo: "",
+      code: ""
     }
   ];
 
@@ -52,10 +62,10 @@ export const Project = () => {
       demo: "https://www.youtube.com/watch?v=_yBl7i3xrz0"
     },
     {
-      title: "Work In Progress...",
-      description: "Wanna see more? Stay tuned!",
-      img: p,
-      demo: ""
+      title: "Momi",
+      description: "Enhance your online coding learning experience! A low-fi user interface prototype that shows the and how the app works, making one's self-learning coding experience fun and creative.",
+      img: momi,
+      demo: "https://www.youtube.com/watch?v=HIMhtmQTVQY"
     }
   ];
 
@@ -74,10 +84,10 @@ export const Project = () => {
       code: "https://github.com/shaqiumeiying/My-Flappy-Game"
     },
     {
-      title: "Work In Progress...",
-      description: "Wanna see more? Stay tuned!",
-      img: p,
-      demo: ""
+      title: "2D Animation",
+      description: "Frame-by-frame fan-animation about my favourite anime 'Jojo's Bizzare adventure'. Received a total of 400K view on Chinese video platform Bilibili. ",
+      img: animation,
+      demo: "https://www.bilibili.com/video/BV1Nx411h7JQ/?spm_id_from=333.999.0.0&vd_source=2f87249205d9d41b2d9f341085388cae"
     }
   ];
 

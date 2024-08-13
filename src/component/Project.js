@@ -15,6 +15,7 @@ import myoc from '../assets/img/myoc.png';
 import flappyd from '../assets/img/FlappyD thumbnail.png';
 import animation from '../assets/img/animation.png'
 import momi from '../assets/img/momi.png'
+import f1 from '../assets/img/f1.png'
 
 export const Project = () => {
   const projects = [
@@ -38,6 +39,14 @@ export const Project = () => {
       img: todo,
       demo: "https://shaqiumeiying.github.io/Simple-Todo-list/",
       code: "https://github.com/shaqiumeiying/Simple-Todo-list"
+    }
+    ,
+    {
+      title: "F1 Database",
+      description: "A database application about the International Racing Event - Formula 1 (F1), implemented with SQL + PHP + Oracle Database.",
+      img: f1,
+      demo: "https://www.students.cs.ubc.ca/~douxinyi/m4/MainUI.php",
+      code: "https://github.com/shaqiumeiying/F1-Database-Application"
     }
   ];
 

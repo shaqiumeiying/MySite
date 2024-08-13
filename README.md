@@ -16,7 +16,7 @@ https://xinyidou.fyi/
 ## The Site
 
 ### Home
-The home page of my site. `LinkedIn`, `Github` and `Steam` link in the Navigation bar, and below is a link to my resume.
+The home page of my site. `LinkedIn`, `Github` and `Upwork` link in the Navigation bar, and below is a link to my resume.
 
 # ![Home](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image.png)
 

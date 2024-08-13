@@ -10,7 +10,7 @@ import insight from '../assets/img/insight ubc.png';
 import todo from '../assets/img/todolist.png';
 import ice from '../assets/img/ice.png';
 import ubcvideo from '../assets/img/ubc video.png';
-import p from '../assets/img/placeholder.png';
+// import p from '../assets/img/placeholder.png';
 import myoc from '../assets/img/myoc.png';
 import flappyd from '../assets/img/FlappyD thumbnail.png';
 import animation from '../assets/img/animation.png'
@@ -38,13 +38,6 @@ export const Project = () => {
       img: todo,
       demo: "https://shaqiumeiying.github.io/Simple-Todo-list/",
       code: "https://github.com/shaqiumeiying/Simple-Todo-list"
-    },
-    {
-      title: "Work In Progress",
-      description: "Wanna know more? Stay tuned!",
-      img: p,
-      demo: "",
-      code: ""
     }
   ];
 

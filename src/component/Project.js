@@ -12,7 +12,7 @@ import ice from '../assets/img/ice.png';
 import ubcvideo from '../assets/img/ubc video.png';
 // import p from '../assets/img/placeholder.png';
 import myoc from '../assets/img/myoc.png';
-import flappyd from '../assets/img/FlappyD thumbnail.png';
+import sv from '../assets/img/shroomVenture.png';
 import animation from '../assets/img/animation.png'
 import momi from '../assets/img/momi.png'
 import f1 from '../assets/img/f1.png'
@@ -79,11 +79,11 @@ export const Project = () => {
       demo: "https://www.youtube.com/watch?v=uTztjAcvb94"
     },
     {
-      title: "FlappyDiane",
-      description: "A flappy bird inspired game created with Unity, Aseprite, FamiStudio and C#.",
-      img: flappyd,
-      demo: "https://xinyidou.itch.io/flappydiane",
-      code: "https://github.com/shaqiumeiying/My-Flappy-Game"
+      title: "ShroomVenture",
+      description: "A 2D Platformer demo made with Unity, Aseprite, and C#.",
+      img: sv,
+      demo: "https://xinyidou.itch.io/shroomventure",
+      code: "https://github.com/shaqiumeiying/ShroomVenture"
     },
     {
       title: "2D Animation",

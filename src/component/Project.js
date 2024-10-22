@@ -13,7 +13,7 @@ import ubcvideo from '../assets/img/ubc video.png';
 // import p from '../assets/img/placeholder.png';
 import myoc from '../assets/img/myoc.png';
 import sv from '../assets/img/shroomVenture.png';
-import animation from '../assets/img/animation.png'
+import guncat from '../assets/img/guncat.png'
 import momi from '../assets/img/momi.png'
 import f1 from '../assets/img/f1.png'
 
@@ -86,10 +86,10 @@ export const Project = () => {
       code: "https://github.com/shaqiumeiying/ShroomVenture"
     },
     {
-      title: "2D Animation",
-      description: "Frame-by-frame fan-animation about my favourite anime 'Jojo's Bizzare adventure'. Received a total of 400K view on Chinese video platform Bilibili. ",
-      img: animation,
-      demo: "https://www.bilibili.com/video/BV1Nx411h7JQ/?spm_id_from=333.999.0.0&vd_source=2f87249205d9d41b2d9f341085388cae"
+      title: "GunCat",
+      description: "2D Arcade Shooter Game developed with C++, OpenGL, and Aseprite",
+      img: guncat,
+      demo: "https://youtu.be/2S_jeZubgsY"
     }
   ];
 

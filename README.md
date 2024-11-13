@@ -1,6 +1,6 @@
 
 # ![MySite](https://github.com/shaqiumeiying/MySite/blob/main/src/assets/readme/image.png)
-# Welcome to my Protfolio✨
+# Welcome to my Portfolio✨
 <table>
 <tr>
 <td>

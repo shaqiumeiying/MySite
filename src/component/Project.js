@@ -73,6 +73,13 @@ export const Project = () => {
 
   const creations = [
     {
+      title: "GunCat",
+      description: "2D Arcade Shooter Game developed with C++, OpenGL, and Aseprite",
+      img: guncat,
+      demo: "https://youtu.be/PtCrz_jeFGo",
+      code: "https://github.com/shaqiumeiying/GunCatSampleCode"
+    },
+    {
       title: "UBC Medicine Residency Programs: Anatomical Pathology",
       description: "Promotion video about the academic home of The UBC Department of Pathology and Laboratory Medicine.",
       img: ubcvideo,
@@ -84,13 +91,8 @@ export const Project = () => {
       img: sv,
       demo: "https://xinyidou.itch.io/shroomventure",
       code: "https://github.com/shaqiumeiying/ShroomVenture"
-    },
-    {
-      title: "GunCat",
-      description: "2D Arcade Shooter Game developed with C++, OpenGL, and Aseprite",
-      img: guncat,
-      demo: "https://youtu.be/2S_jeZubgsY"
     }
+    
   ];
 
   const [activeKey, setActiveKey] = useState('first'); 

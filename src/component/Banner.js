@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo, Suspense, lazy } from
 import styled, { keyframes } from 'styled-components';
 import { ArrowRightCircleFill } from "react-bootstrap-icons";
 import * as THREE from 'three';
-import myCV from '../assets/cv.pdf';
+import myCV from '../assets/CV_2024_12.pdf';
 import ochero from '../assets/img/hero_oc1.png';
 
 const Canvas = lazy(() => import('@react-three/fiber').then(module => ({ default: module.Canvas })));

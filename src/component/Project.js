@@ -13,9 +13,11 @@ import ubcvideo from '../assets/img/ubc video.png';
 // import p from '../assets/img/placeholder.png';
 import myoc from '../assets/img/myoc.png';
 import sv from '../assets/img/shroomVenture.png';
-import guncat from '../assets/img/guncat.png'
-import momi from '../assets/img/momi.png'
-import f1 from '../assets/img/f1.png'
+import guncat from '../assets/img/guncat.png';
+import momi from '../assets/img/momi.png';
+import f1 from '../assets/img/f1.png';
+import bilibili from '../assets/img/bilibili.jpg';
+import ae from '../assets/img/ae.png';
 
 export const Project = () => {
   const projects = [
@@ -91,7 +93,21 @@ export const Project = () => {
       img: sv,
       demo: "https://xinyidou.itch.io/shroomventure",
       code: "https://github.com/shaqiumeiying/ShroomVenture"
+    },
+    {
+      title: "Bilibili Account",
+      description: "My main social media account(at Bilibili), where I interact with my followers by bringing them new contents and sharing my creations.",
+      img: bilibili,
+      demo: "https://space.bilibili.com/4524892?spm_id_from=333.1007.0.0"
+    },
+    {
+      title: "AE Animation",
+      description: "This is a fan-made animation of the horror game 'Miside'. The animation was created using Adobe After Effects and Photoshop. Uploaded to Bilibili, Douyin, and Youtube",
+      img: ae,
+      demo: "https://www.douyin.com/user/MS4wLjABAAAADBkoPIpsjPx9AKik8ocAigMIovsjjiYHdESKKBr_FfA?from_tab_name=main&modal_id=7452635442077240615"
     }
+
+
     
   ];
 

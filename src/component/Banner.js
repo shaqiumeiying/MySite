@@ -142,7 +142,7 @@ export const Banner = React.memo(() => {
             <span className="tagline">Welcome to my Portfolio</span>
             <h1>{`I Love `}<span className="wrap">{text}</span></h1>
             <br />
-            <p>Hey😊 I'm Diana, an undergraduate student excitedly gearing up for the next chapter in my academic and professional adventure!</p>
+            <p>Hey😊 I'm Diana, a graduate student excitedly gearing up for the next chapter in my academic and professional adventure!</p>
             <p>With a solid background in Computer Science, I'm passionate about all things and am ready to explore the unknown.</p>
             <p>Scroll down to join my world of experiences, achievements, and dreams!</p>
             <br />

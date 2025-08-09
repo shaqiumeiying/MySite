@@ -78,7 +78,7 @@ export const Project = () => {
       title: "GunCat",
       description: "2D Arcade Shooter Game developed with C++, OpenGL, and Aseprite",
       img: guncat,
-      demo: "https://youtu.be/PtCrz_jeFGo",
+      demo: "https://aydenthekinch.itch.io/guncat",
       code: "https://github.com/shaqiumeiying/GunCatSampleCode"
     },
     {
